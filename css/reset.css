@@ -1,0 +1,54 @@
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body, menu {
+	margin:0;
+	padding:0;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0 !important;
+}
+input{
+	border: 0 none;
+    background: none repeat scroll 0 0 transparent;
+    outline: medium none;
+}
+*:focus  
+{  
+    outline: none;  
+}  
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+/*h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}*/
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+
+a{
+	text-decoration: none;
+	-webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      -ms-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
