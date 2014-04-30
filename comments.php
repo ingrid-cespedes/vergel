@@ -98,22 +98,25 @@ foreach ( $comments as $comment )
 <?php else : ?>
 
 							<p id="comment-notes"><?php _e( 'Your email is <em>never</em> shared.', 'sandbox' ) ?> <?php if ($req) _e( 'Required fields are marked <span class="required">*</span>', 'sandbox' ) ?></p>
+							<div class='form-group'>
+								<label for="author"><?php _e( 'Name', 'sandbox' ) ?></label> <?php if ($req) _e( '<span class="required">*</span>', 'sandbox' ) ?>
+								<input id="author" name="author" class="form-control text<?php if ($req) echo ' required'; ?>" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="50" tabindex="3" />
+							</div>
 
-							<div class="form-label"><label for="author"><?php _e( 'Name', 'sandbox' ) ?></label> <?php if ($req) _e( '<span class="required">*</span>', 'sandbox' ) ?></div>
-							<div class="form-input"><input id="author" name="author" class="text<?php if ($req) echo ' required'; ?>" type="text" value="<?php echo $comment_author ?>" size="30" maxlength="50" tabindex="3" /></div>
-
-							<div class="form-label"><label for="email"><?php _e( 'Email', 'sandbox' ) ?></label> <?php if ($req) _e( '<span class="required">*</span>', 'sandbox' ) ?></div>
-							<div class="form-input"><input id="email" name="email" class="text<?php if ($req) echo ' required'; ?>" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" /></div>
-
-							<div class="form-label"><label for="url"><?php _e( 'Website', 'sandbox' ) ?></label></div>
-							<div class="form-input"><input id="url" name="url" class="text" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" /></div>
-
+							<div class='form-group'>
+								<label for="email"><?php _e( 'Email', 'sandbox' ) ?></label> <?php if ($req) _e( '<span class="required">*</span>', 'sandbox' ) ?>
+								<input id="email" name="email" class="form-control text<?php if ($req) echo ' required'; ?>" type="text" value="<?php echo $comment_author_email ?>" size="30" maxlength="50" tabindex="4" />
+							</div>
+							<div class='form-group'>
+								<label for="url"><?php _e( 'Website', 'sandbox' ) ?></label>
+								<input id="url" name="url" class="text form-control" type="text" value="<?php echo $comment_author_url ?>" size="30" maxlength="50" tabindex="5" />
+							</div>
 <?php endif // REFERENCE: * if ( $user_ID ) ?>
-
-							<div class="form-label"><label for="comment"><?php _e( 'Comment', 'sandbox' ) ?></label></div>
-							<div class="form-textarea"><textarea id="comment" name="comment" class="text required" cols="45" rows="8" tabindex="6"></textarea></div>
-
-							<div class="form-submit"><input id="submit" name="submit" class="button" type="submit" value="<?php _e( 'Post Comment', 'sandbox' ) ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id ?>" /></div>
+							<div class='form-group'>
+								<label for="comment"><?php _e( 'Comment', 'sandbox' ) ?></label>
+								<textarea id="comment" name="comment" class="form-control text required" cols="45" rows="8" tabindex="6"></textarea>
+							</div>
+							<div class="form-submit"><input id="submit" name="submit" class="btn btn-primary button" type="submit" value="<?php _e( 'Post Comment', 'sandbox' ) ?>" tabindex="7" /><input type="hidden" name="comment_post_ID" value="<?php echo $id ?>" /></div>
 
 							<div class="form-option"><?php do_action( 'comment_form', $post->ID ) ?></div>
 

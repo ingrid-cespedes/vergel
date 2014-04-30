@@ -12,11 +12,13 @@
 
 <body class="<?php sandbox_body_class() ?>">
 
-<div id="wrapper" class="hfeed">
+<div id="wrapper" class="hfeed container">
 
-	<div id="header">
-		<h1 id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php echo esc_html( get_bloginfo('name'), 1 ) ?>" rel="home"><?php bloginfo('name') ?></a></span></h1>
-		<div id="blog-description"><?php bloginfo('description') ?></div>
+	<div class="navbar navbar-static-top" id="header" role="banner">
+		<div class="navbar-header">
+			<h1 id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php echo esc_html( get_bloginfo('name'), 1 ) ?>" rel="home"><?php bloginfo('name') ?></a></span></h1>
+			<div id="blog-description"><?php bloginfo('description') ?></div>
+		</div>
 	</div><!--  #header -->
 
 	<div id="access">
