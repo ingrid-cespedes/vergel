@@ -4,19 +4,18 @@
 
 
 .jumbotron {
-  padding: @jumbotron-padding;
   margin-bottom: @jumbotron-padding;
   color: @jumbotron-color;
   background-color: @jumbotron-bg;
-  background-image: url("@{img-path}dark_wall.png");
-
+  background-image: url("@{img-path}foto4.jpg");
+  
 
   h1,
   .h1 {
     color: @jumbotron-heading-color;
   }
   p {
-    margin-bottom: (@jumbotron-padding / 2);
+    margin-bottom: (@jumbotron-padding / 0.5);
     font-size: @jumbotron-font-size;
     font-weight: 200;
   }
@@ -27,11 +26,13 @@
 
   .container & {
     border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+     
   }
 
   .container {
     max-width: 100%;
-
+    padding-top:(@jumbotron-padding * 5);
+    text-align: center;
   }
 
   @media screen and (min-width: @screen-sm-min) {
