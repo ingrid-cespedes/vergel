@@ -8,7 +8,11 @@
 }
 
 .navbar-brand{
-	padding: 16.33px 30px;
+	padding: 18.33px 30px;
+
+}
+.navbar-brand img{
+	max-width: 50px;
 }
 
 .paddingcontainer{ 
@@ -20,8 +24,7 @@
  }
 
 .logo{
-	margin-left: 150px;
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 }
 
 .encabezado{
@@ -34,9 +37,11 @@
 footer{
 	background-color: #353535;
 	height: 140px;
-	margin-top: 200px;
+	margin-top: 100px;
 	color: #FFFFFF;
-	bottom: 0;
+	position: relative;
+	bottom:0;
+	width: 100%;
 }
 
 footer a{
@@ -45,7 +50,8 @@ footer a{
 
 footer .container{
 	position: fixed-bottom;
-	bottom: 0;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 .row{
@@ -64,6 +70,10 @@ footer img{
 .alinearderecha{
 	float:right;
 }
+
+.btn-group alinearderecha{
+	margin-top:-45px
+}
 .pagination{
 	margin:0 auto;
 }
@@ -72,11 +82,56 @@ footer img{
 	margin-top: 20px;
 }
 
+.col-md-3 a{
+	text-decoration:none;
+}
 
+.containerdibujo{
+	background-image: url(../img/croquis6.png);
+	background-repeat: no-repeat;
+	width: 100%;
 
+}
+
+.containerdibujo{
+	background-image: url("../img/croquis6.png");
+	background-repeat: no-repeat;
+	
+}
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width:361px){
+	.margensuperior{margin-top: 100px;}
+	.logo{
+	margin-left: auto;
+	}
+
+	footer{
+	text-align: center;
+	background-color: #353535;
+	height: 200px;
+	margin-top: 100px;
+	color: #FFFFFF;
+	bottom: 0;
+	font-size: 10px;
+	}
+
+	.jumbotron .container{
+
+		padding-bottom: 30px;
+		padding-top: 90px;
+
+	}
+
+	.navbar-brand{
+	padding: 10px 30px;
+
+}
+}
+
+//TELÉFONO HORIZONTAL
+
+@media (max-width:500px){
 	.margensuperior{margin-top: 100px;}
 	.logo{
 	margin-left: auto;
@@ -98,5 +153,11 @@ footer img{
 		padding-top: 90px;
 
 	}
+
+	.navbar-brand{
+	padding: 10px 30px;
+
 }
+}
+
 
