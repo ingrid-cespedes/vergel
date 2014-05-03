@@ -16,8 +16,21 @@
     <link href="../css/vergel.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+      <script languaje="Javascript">
+<!--
+document.write('<style type="text/css">div.ocultable{display: none;}</style>');
+function MostrarOcultar(capa,enlace)
+{
+    if (document.getElementById)
+    {
+        var aux = document.getElementById(capa).style;
+        aux.display = aux.display? "":"block";
+    }
+}
 
+//-->
+</script>
+    <!--fin Prueba-->
 </head>
 
 <body>
@@ -38,7 +51,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-inverse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">CONCURSO</a></li>
+        <li class="active"><a href="#">CONCURSO</a></li>
         <li><a href="#">PARTICIPANTES</a></li>
         <li><a href="#">MAPAS</a></li>
         <li><a href="#">ESTUDIOS</a></li>
@@ -62,23 +75,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+ 
 
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-
-<div class="jumbotron">
-    <div class="container">
-
-        <h1>¡Regístrate y participa!</h1>
-        <p>Cuéntanos tu experiencia</p>
-        <a class="btn btn-primary btn-lg" role="button" href="#">Comienza aquí</a>
-    </div>
-</div>
 
 <!-- Galería -->
 
     <div class="container">
-     
+     <div class="margensuperior"></div>
       <div class="row">
       
         <div class="col-md-6">
@@ -89,6 +92,7 @@
 <h3>CONCURSO DE RELATOS</h3>   
 <h5>EL VERGEL 439, CERRO LA CRUZ, VALPARAÍSO</h5>
 
+
 <br></br>
 <h5><strong>1. Introducción.</strong>
 </h5>
@@ -98,27 +102,29 @@
 El lugar se emplaza como una propiedad pública en donde todos seremos partícipes de su crecimiento y permanente cuidado.<p>
 
 <p class="text-justify">Se pretende construir una memoria urbana, física y tangible de lo sucedido en el desastre, para llegar al colectivo de forma real-visual del recuerdo, siendo las mismas personas las creadoras de contenidos a través de sus ideas. El concurso trata de trascender en lo que su significado acomete, ya que es un certamen de participación pública y compete a un tipo de muestra hecha por todos en donde el lugar será nuestro premio y el encuentro con las experiencias.<p>
+
 <br></br>
+<a href="javascript:MostrarOcultar('texto1');" id="enlace1"> <button type="button" class="btn btn-default btn-sm">Mostrar/Ocultar</button></a>
+<div class="ocultable" id="texto1">
 <h5><strong>2. Antecedentes.</strong></h5>
-<p class="text-justify">Este Concurso de Ideas surge desde las ruinas del incendio, en la búsqueda de la construcción de la memoria de la experiencia. Esta memoria, urbana y frágil y su posterior proposición, han de ser tratadas con suma precisión, pues serán el primer paso para la construcción de la memoria de la catástrofe.<p>
+<p class="text-justify">Este Concurso de Ideas surge desde las ruinas del incendio, en la búsqueda de la construcción de la memoria de la experiencia. Esta memoria, urbana y frágil y su posterior proposición, han de ser tratadas con suma precisión, pues serán el primer paso para la construcción de la memoria de la catástrofe.</p>
 
-<p class="text-justify">>Son las ruinas de la mayor “tragedia urbana” de Valparaíso, ciudad que vive de la desgracia para refundarse constantemente. Pero Valparaíso tiene una particularidad, y esta es, que se funda y re-funda con el testimonio, testimonio que es comunitario y abierto para todos.<p>
+<p class="text-justify">Son las ruinas de la mayor “tragedia urbana” de Valparaíso, ciudad que vive de la desgracia para refundarse constantemente. Pero Valparaíso tiene una particularidad, y esta es, que se funda y re-funda con el testimonio, testimonio que es comunitario y abierto para todos.</p>
 
-<p class="text-justify">Este testimonio quedará para la ciudad, para quienes la habitan  hoy  y en un futuro.  Será entonces el recuerdo y la advertencia constante de lo frágil que es el humano frente al territorio en el que habita, es en gran parte su propia construcción. Será también el testimonio de lo frágil que es frente a realidades urbanas adversas, asimétricas  y excluidas.<p>
+<p class="text-justify">Este testimonio quedará para la ciudad, para quienes la habitan  hoy  y en un futuro.  Será entonces el recuerdo y la advertencia constante de lo frágil que es el humano frente al territorio en el que habita, es en gran parte su propia construcción. Será también el testimonio de lo frágil que es frente a realidades urbanas adversas, asimétricas  y excluidas.</p>
 
-<p class="text-justify">Por ende, esta construcción de la memoria urbana será a su vez, un impulso para que la sociedad se encamine a la transformación de su entorno-ciudad, en pro de convertirla en un territorio que integra y permite el diálogo de quienes viven en el lugar y en la ciudad, cuya consecuencia permitiría disminuir la precariedad, la degradación ambiental, reducir la segregación y las injusticias.<p>
+<p class="text-justify">Por ende, esta construcción de la memoria urbana será a su vez, un impulso para que la sociedad se encamine a la transformación de su entorno-ciudad, en pro de convertirla en un territorio que integra y permite el diálogo de quienes viven en el lugar y en la ciudad, cuya consecuencia permitiría disminuir la precariedad, la degradación ambiental, reducir la segregación y las injusticias.</p>
 
 <br></br>
-<h5><strong>2. Convocatoria.</strong></h5>
-<p class="text-justify">Este primer paso para la construcción de la Memoria del Incendio en El Vergel 439, se presenta a modo de Concurso de Ideas, que busca registrar la experiencia vivida por cada una de las personas; tanto los que apoyaron en los Cerros de Valparaíso como voluntarios, los días posteriores al 12 de abril de 2014,  las familias damnificadas y los testimonios varios de los espectadores a lo largo de la Quinta Región.<p>
+<h5><strong>3. Convocatoria.</strong></h5>
+<p class="text-justify">Este primer paso para la construcción de la Memoria del Incendio en El Vergel 439, se presenta a modo de Concurso de Ideas, que busca registrar la experiencia vivida por cada una de las personas; tanto los que apoyaron en los Cerros de Valparaíso como voluntarios, los días posteriores al 12 de abril de 2014,  las familias damnificadas y los testimonios varios de los espectadores a lo largo de la Quinta Región.</p>
  
 <p class="text-justify">La participación busca rescatar la esencia de la experiencia personal vivida en las distintas labores realizadas. La suma, convergencia y divergencia de estas experiencias e ideas harán surgir los siguientes pasos para la construcción del lugar de la Memoria del Incendio.</p>
 
 <p class="text-justify">Esta convocatoria es abierta y se extiende a todos quienes quieran participar.</p>
 <p class="text-justify">Las ruinas de la casa están abiertas a quien quiera visitarlas a modo de guía para la elaboración de las propuestas (hay que pensar después para el sitio, si es conveniente crear un formulario que incorpore además de el nombre/apellido, descripción, categoría y archivo, la edad, ya que la percepción de los menores{en caso de que sean considerados}; que quieran participar por motivación de sus padres, puede tener un valor agregado para posterior utilización de este tipo de material selectivo).</p>
-
 <br></br>
-<h5><strong>3. Formato de entrega.</strong></h5>
+<h5><strong>4. Formato de entrega.</strong></h5>
 <p class="text-justify">Junto con el formulario de postulación, la propuesta se entregará en un formato o soporte material libre, que queda a elección del medio de expresión que más parezca al postulante (“relato escrito”,”fotografìa”,  “audio”, “video”,”dibujos, croquis, etc” ).</p>
  
 <p class="text-justify">La propuesta a entregar consta de dos partes;</p>
@@ -126,28 +132,27 @@ El lugar se emplaza como una propiedad pública en donde todos seremos partícip
 <p class="text-justify">(b) un planteamiento acerca de qué debiera ser y/o cómo se debiera desarrollar en el tiempo, una Memoria-Ruina del Incendio.</p>
  
 <br></br>
-<h5><strong>4. Plazos.</strong></h5>
+<h5><strong>5. Plazos.</strong></h5>
 <p class="text-justify">La convocatoria abre su periodo de recepción de propuesta el día lunes 5 de mayo de 2014 a las 00.00 horas y finaliza el día 2 de junio de 2014 a las 00.00 horas.</P>
 
 <br></br> 
-<h5><strong>5. Distinciones y autorías.</strong></h5>
+<h5><strong>6. Distinciones y autorías.</strong></h5>
 <p class="text-justify">Este Concurso de Ideas busca la generación de un fundamento y soporte para la posterior realización de un Concurso Profesional para el desarrollo del Proyecto y Construcción del lugar de la Memoria del Incendio, al mismo tiempo que se centra en la creación de un registro de las experiencias humanas y sociales vividas los días posteriores al incendio, a ser publicado con posterioridad.</P>
 
 <p class="text-justify">Por esta razón, los autores de la(s) idea(s) que resulten seleccionadas, serán invitados a participar en la generación del Concurso Profesional para la materialización del lugar de la Memoria del Incendio.</P>
+ 
+<p class="text-justify">Todas las ideas, así como las publicaciones posteriores responderán a la autoría del registrado en el Sitio Web, quien postuló a este Concurso de Ideas. Esta convocatoria busca generar el soporte y la instancia recopilatoria de ideas de las personas/autores. En un futuro la reunión en el lugar memorial y cultural, será de valiosa importancia para la memoria colectiva de la ciudad de Valparaíso.</P></div>
 
-<p class="text-justify">Todas las ideas, así como las publicaciones posteriores responderán a la autoría del registrado en el Sitio Web, quien postuló a este Concurso de Ideas. Esta convocatoria busca generar el soporte y la instancia recopilatoria de ideas de las personas/autores. En un futuro la reunión en el lugar memorial y cultural, será de valiosa importancia para la memoria colectiva de la ciudad de Valparaíso.</P>
-
-                    </div>
-                  </div>
-                </a>
+                  </div> 
+               </div> 
+                
         </div>
 
         <div class="col-md-6">
                 <a href="#">
                   <div class="thumbnail">
                       <img src="../img/thumb.jpg" alt="Casa Luis Alvarez">
-                      <div class="caption">
-                       
+                      <div class="caption">             
                     </div>
                   </div>
                 </a>
