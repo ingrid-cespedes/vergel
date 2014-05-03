@@ -52,7 +52,7 @@ function MostrarOcultar(capa,enlace)
     <div class="collapse navbar-inverse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">CONCURSO</a></li>
-        <li><a href="#">PARTICIPANTES</a></li>
+        <li><a href="galeria.html">PARTICIPANTES</a></li>
         <li><a href="#">MAPAS</a></li>
         <li><a href="#">ESTUDIOS</a></li>
         <li><a href="#">PRENSA</a></li>
@@ -67,7 +67,7 @@ function MostrarOcultar(capa,enlace)
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">USUARIO <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="registro.html">REGÍSTRATE</a></li>
-            <li><a href="inciciarsecion">INICIAR SESIÓN</a></li>
+            <li><a href="iniciarsecion.html">INICIAR SESIÓN</a></li>
             <li><a href="#"></a></li>
           </ul>
         </li>
@@ -78,7 +78,6 @@ function MostrarOcultar(capa,enlace)
  
 
 
-<!-- Galería -->
 
     <div class="container">
      <div class="margensuperior"></div>
@@ -149,14 +148,33 @@ El lugar se emplaza como una propiedad pública en donde todos seremos partícip
         </div>
 
         <div class="col-md-6">
-                <a href="#">
-                  <div class="thumbnail">
-                      <img src="../img/thumb.jpg" alt="Casa Luis Alvarez">
-                      <div class="caption">             
-                    </div>
-                  </div>
-                </a>
+
+          <div class="cajaregistro">
+             <div class="logo"><img src="../img/vergel432logonegro.png"></div> 
+            <form role="form">
+              <div class="form-group">
+                <label for="exampleInputName">Nombre y Apellido</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre y Apellido">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mail">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Conttraseña">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Repetir contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repetir contraseña">
+              </div>
+              
+              
+              <button type="submit" class="btn btn-default">Registrate</button>
+            </form>
+          </div>
         </div>
+      
 
       </div>
 
