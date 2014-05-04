@@ -19,6 +19,12 @@
 			<h1 id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php echo esc_html( get_bloginfo('name'), 1 ) ?>" rel="home"><?php bloginfo('name') ?></a></span></h1>
 			<div id="blog-description"><?php bloginfo('description') ?></div>
 		</div>
+
+		<ul id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'vergel' ); ?></button>
+			<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+		</ul>
 	</div><!--  #header -->
 
 	<div id="access">
