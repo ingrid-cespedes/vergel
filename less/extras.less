@@ -63,8 +63,8 @@ footer img{
 	height: 25px;
 }
 
-.margin-top-fix{
-	margin-top: 110px;
+.margensuperior{
+	margin-top: 200px;
 }
 
 .alinearderecha{
@@ -86,21 +86,27 @@ footer img{
 	text-decoration:none;
 }
 
-.container-croquis{
-	background-color: #FEFEFE;
-	background-image: url('@{img-path}croquis.png');
+.containerdibujo{
+	background-image: url(../img/croquis6.png);
 	background-repeat: no-repeat;
-	background-position: center center;
+	width: 100%;
+ 
 }
-
 .btn-default {
 	background-color:#f49f5c;
 }
 
+
+
+.containerdibujo{
+	background-image: url("../img/croquis6.png");
+	background-repeat: no-repeat;
+	
+}
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
-@media (max-width: @screen-xs){
-	.margin-top-fix{margin-top: 100px;}
+@media (max-width:361px){
+	.margensuperior{margin-top: 100px;}
 	.logo{
 	margin-left: auto;
 	}
@@ -131,7 +137,7 @@ footer img{
 //TELÉFONO HORIZONTAL
 
 @media (max-width:500px){
-	.margin-top-fix{margin-top: 100px;}
+	.margensuperior{margin-top: 100px;}
 	.logo{
 	margin-left: auto;
 	}
