@@ -15,6 +15,23 @@
 }
 
 
+.entry-header{
+
+	aside{
+		color: @gray-light;
+		ul{
+			margin: @line-height-computed*.75 0;
+			padding: 0;
+			font-size: 12px;
+			li{
+				display: inline;
+				margin-left: 20px;
+				&:first-child{margin-left: 0}
+			}
+		}
+	}
+}
+
 .nav li a:hover{
 	color:#f49f5c	
 }
@@ -69,8 +86,8 @@ footer img{
 	height: 25px;
 }
 
-.margensuperior{
-	margin-top: 200px;
+.margin-top-fix{
+	margin-top: @navbar-height + 3*@line-height-computed;
 }
 
 .alinearderecha{
@@ -105,7 +122,7 @@ footer img{
 	color:#f49f5c;
 }
 
-.containerdibujo{
+.background-croquis{
 	background-image: url(../img/croquis6.png);
 	background-repeat: no-repeat;
 	background-position: center left;
@@ -113,7 +130,7 @@ footer img{
 }
 
 
-.containerdibujo{
+.background-croquis{
 	background-image: url("../img/croquis6.png");
 	background-repeat: no-repeat;
 	
@@ -121,7 +138,7 @@ footer img{
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width: @screen-xs){
-	.margensuperior{margin-top: 100px;}
+	.margin-top-fix{margin-top: 100px;}
 	.logo{
 	margin-left: auto;
 	}
@@ -152,7 +169,7 @@ footer img{
 //TELÉFONO HORIZONTAL
 
 @media (max-width: @screen-sm){
-	.margensuperior{margin-top: @navbar-height;}
+	.margin-top-fix{margin-top: @navbar-height;}
 	.logo{
 	margin-left: auto;
 	}
