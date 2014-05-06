@@ -6,7 +6,7 @@
     <div class="container">
 
         <h1>Relatos del 12 de Abril</h1>
-        <p>Lanzamos un <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Concurso' ) ) ); ?>">concurso</a> para reconstruir la memoria de este trágico hecho que azotó a Valparaíso</p>
+        <p>Lee las <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Concurso' ) ) ); ?>">bases del concurso</a> y comparte tu experiencia</p>
 
 		<?php global $current_user; get_currentuserinfo(); if (is_user_logged_in () ) { ?>
     		<p>Ya estás registrado, ahora sólo te falta compartir tu historia.</p>
@@ -47,7 +47,7 @@
 
 
         <div class="row">
-          <div class="encabezado"><h3>Último Aporte</h3></div>
+          <div class="encabezado"><h3>Últimos Aportes</h3></div>
 			<?php query_posts('category_name=ideas&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
