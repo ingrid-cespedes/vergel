@@ -1,10 +1,20 @@
-	<div id="footer">
-		<span id="generator-link"><a href="http://wordpress.org/" title="<?php _e( 'WordPress', '' ) ?>" rel="generator"><?php _e( 'WordPress', 'sandbox' ) ?></a></span>
-		<span class="meta-sep">|</span>
-		<span id="theme-link"><a href="http://www.joaquinmartel.cl/" title="<?php _e( 'Martel Blank, theme for WordPress', '' ) ?>" rel="designer"><?php _e( 'Martel Blank', 'sandbox' ) ?></a></span>
-	</div><!-- #footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<p>Contáctanos | <a href="mailto:elvergel439@gmail.com">elvergel439@gmail.com</a> </p>
+			</div>
 
-</div><!-- #wrapper .hfeed -->
+			<div class="col-md-5">
+				<p>Sitios Relacionados | <a href="http://wwww.ead.pucv.cl">Escuela de Arquitectura y Diseño PUCV</a></p>
+			</div>
+
+			<div class="col-md-3">
+				<p>Redes Sociales | <a href="https://www.facebook.com/Vergel439?fref=ts"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook.png"</img></a> <a href="https://twitter.com/Vergel439"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/twitter.png"</img></a></p>
+			</div>
+		</div>
+	</div>
+</footer>
 
 <?php wp_footer() ?>
 
