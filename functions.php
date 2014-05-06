@@ -546,7 +546,7 @@ add_theme_support( 'post-thumbnails' );
 
 /*----------------------------- Creo menus */
 register_nav_menu( 'primary', 'Menú Header');
-
+register_nav_menu( 'secondary', 'Menú Footer');
 
 /*----------------------------- Excerpt (Permito acortarlo a limite de palabras */
 function string_limit_words($string, $word_limit) {

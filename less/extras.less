@@ -1,4 +1,8 @@
 
+html{
+	height: 100%;
+}
+
 .map-container{
 	.clearfix();
 	margin: 0;
@@ -34,9 +38,9 @@
 		text-align: center;
 		float: left;
 		position: absolute;
-		top: .5em;
-		font-size: 2em;
-		left: 20%;
+		top: 22px;
+		font-size: 20px;
+		left: 25%;
 		text-transform: uppercase;
 		letter-spacing: .5ex;
 	}
@@ -96,23 +100,33 @@
 	margin-top: 20px;
 }
 
-
 .push-footer{
 	margin-bottom: @footer-height;
 }
 
+/*--------------- Footer */
+
+
 footer{
 	position: relative;
+	bottom: 0;
 	background-color: @semi-black;
-	margin-top: -10px;
 	height: @footer-height;
 	color: #FFFFFF;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-
+	font-size: 12px;
 	.container{
 		bottom: 50px;
+	}
+
+	#menu-menu-de-pie-de-pagina{
+		text-align: left;
+		margin-top: 50px;
+		&.nav > li > a{
+			padding: 6px 12px !important;
+		}
 	}
 }
 
@@ -159,18 +173,21 @@ footer img{
 }
 
 
+
 /* WP User Front End */
 
 
 #wpuf-post-area{
 
+	margin-bottom: 100px;
 	label{
 		text-align: right;
 	}
 
-	input,
-	textarea{
-		
+	input.wpuf_submit{
+		.btn;
+		.btn-primary;
+		float: right;
 	}
 }
 
