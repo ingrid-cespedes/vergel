@@ -1,48 +1,65 @@
 <?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
 
-			<h2 class="page-title"><?php _e( 'Category Archives:', 'sandbox' ) ?> <span><?php single_cat_title() ?></span></h2>
-			<?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
+  <div class="container margin-top-fix">
+      
+    <div class="row">
 
+      <div class="encabezado">
+          <h3><strong><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></strong></h3>
+      </div>
+      
+      
+	<!--        
+      <div class="btn-group alinearderecha">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Ordenar por<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+              <li><a href="#">Más Recientes</a></li>
+              <li><a href="#">Más Antiguas</a></li>
+              <li><a href="#">Más Votados</a></li>
+          </ul>
+      </div>
+	-->
+	        
+      </div><!-- .row -->
 
-			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' ) ) ?></div>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?></div>
-			</div>
+      <!--  <div class="row"> -->
+		<?php
+		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
+		  while ($wp_query->have_posts()) : $wp_query->the_post();
+		?>
 
-<?php while ( have_posts() ) : the_post() ?>
+			        <div class="col-md-3">
+						<a href="<?php the_permalink() ?>">
+			                <div class="thumbnail">
+			                	<?php the_post_thumbnail('medium');?>
+			                    <div class="caption">
+			                    	<h4><?php the_title(); ?></h4>
+									<h6><?php the_time ('l j F, Y'); ?></h6>
+			                        <h5><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></h5>
+			                    </div>
+							</div>
+		                </a>
+					</div>
 
-			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-				<h3 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf( __( 'Permalink to %s', 'sandbox' ), the_title_attribute('echo=0') ) ?>" rel="bookmark"><?php the_title() ?></a></h3>
-				<div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php unset($previousday); printf( __( '%1$s &#8211; %2$s', 'sandbox' ), the_date( '', '', '', false ), get_the_time() ) ?></abbr></div>
-				<div class="entry-content">
-<?php the_excerpt(__( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?>
+	<?php endwhile; wp_reset_postdata(); ?>
 
-				</div>
-				<div class="entry-meta">
-					<span class="author vcard"><?php printf( __( 'By %s', 'sandbox' ), '<a class="url fn n" href="' . get_author_posts_url( false, $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( __( 'View all posts by %s', 'sandbox' ), $authordata->display_name ) . '">' . get_the_author() . '</a>' ) ?></span>
-					<span class="meta-sep">|</span>
-<?php if ( $cats_meow = sandbox_cats_meow(', ') ) : // Returns categories other than the one queried ?>
-					<span class="cat-links"><?php printf( __( 'Also posted in %s', 'sandbox' ), $cats_meow ) ?></span>
-					<span class="meta-sep">|</span>
-<?php endif ?>
-					<?php the_tags( __( '<span class="tag-links">Tagged ', 'sandbox' ), ", ", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
-<?php edit_post_link( __( 'Edit', 'sandbox' ), "\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
-					<span class="comments-link"><?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?></span>
-				</div>
-			</div><!-- .post -->
+    <!--Inicio de codigo de pagination-->
+	    <?php wp_pagenavi(); //Posts por páginas ?>
+    
+        <ul class="pagination topp">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+	
+	<!-- </div> ¿.row? -->
+  </div><!--cierre de container-->
 
-<?php endwhile; ?>
-
-			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' ) ) ?></div>
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?></div>
-			</div>
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
 <?php get_footer() ?>
