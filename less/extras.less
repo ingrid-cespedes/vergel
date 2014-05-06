@@ -19,7 +19,7 @@ html{
 	margin: 0 20px 50px;
 	color: @white;
 	&.btn-registrate{
-		background-color:lighten(@rojo, 10);
+		background-color:lighten(@rojo, 15);
 		&:hover{
 			color: @white;
 			background-color: lighten(@rojo, 20);
@@ -34,6 +34,8 @@ html{
 	}
 }
 
+
+
 .navbar{
 	.cabecera,
 	.heading{
@@ -46,6 +48,12 @@ html{
 		left: 25%;
 		text-transform: uppercase;
 		letter-spacing: .5ex;
+	}
+	.navbar-brand{
+		height: 81px;
+		&:hover{
+			border-bottom: 5px solid @white;
+		}
 	}
 }
 
