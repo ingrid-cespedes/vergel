@@ -1,5 +1,53 @@
+
+html{
+	height: 100%;
+}
+
+.map-container{
+	.clearfix();
+	margin: 0;
+	padding: 0;
+
+}
+
+.btn-rnd{
+	.size(120px, 120px);
+	font-size: 20px;
+	text-shadow: 2px 2px 0 fade(@black, 20);
+	padding: 43px 0;
+	border-radius: 50%;
+	margin: 0 20px 50px;
+	color: @white;
+	&:hover{
+		color: @white;
+		background-color: darken(#1f8cd0, 30);
+	}
+	&.btn-registrate{
+		background-color: #70bee7 !important;
+
+	}
+	&.btn-participa{
+		background-color: #1f8cd0 !important;
+	}
+}
+
+.navbar{
+	.cabecera,
+	.heading{
+		color: white;
+		text-align: center;
+		float: left;
+		position: absolute;
+		top: 22px;
+		font-size: 20px;
+		left: 25%;
+		text-transform: uppercase;
+		letter-spacing: .5ex;
+	}
+}
+
+
 .navbar-icono{
-	
 	float: left;
   	padding: @nav-link-padding;
   	font-size: @font-size-large;
@@ -52,24 +100,33 @@
 	margin-top: 20px;
 }
 
-
 .push-footer{
 	margin-bottom: @footer-height;
 }
 
+/*--------------- Footer */
+
+
 footer{
 	position: relative;
+	bottom: 0;
 	background-color: @semi-black;
-	margin-top: 100px;
 	height: @footer-height;
 	color: #FFFFFF;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-
+	font-size: 12px;
 	.container{
 		bottom: 50px;
+	}
 
+	#menu-menu-de-pie-de-pagina{
+		text-align: left;
+		margin-top: 50px;
+		&.nav > li > a{
+			padding: 6px 12px !important;
+		}
 	}
 }
 
@@ -102,18 +159,30 @@ footer img{
 	text-decoration:none;
 }
 
-
-.col-md-6 a:hover{
-	color:@naranjo;
-}
-
 .background-croquis{
 	background-image: url("@{img-path}croquis6.png");
 	background-repeat: no-repeat;
 	background-position: center left;
-	background-color: #FDFDFD;
-	
+	background-color: #FDFDFD;	
 }
+
+/* WP User Front End */
+
+
+#wpuf-post-area{
+
+	margin-bottom: 100px;
+	label{
+		text-align: right;
+	}
+
+	input.wpuf_submit{
+		.btn;
+		.btn-primary;
+		float: right;
+	}
+}
+
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width: @screen-xs){
@@ -123,13 +192,13 @@ footer img{
 	}
 
 	footer{
-	text-align: center;
-	background-color: #353535;
-	height: 200px;
-	margin-top: 100px;
-	color: #FFFFFF;
-	bottom: 0;
-	font-size: 10px;
+		text-align: center;
+		background-color: #353535;
+		height: 200px;
+		margin-top: 100px;
+		color: #FFFFFF;
+		bottom: 0;
+		font-size: 10px;
 	}
 
 	.jumbotron .container{
@@ -142,7 +211,11 @@ footer img{
 	.navbar-brand{
 	padding: 10px 30px;
 
-}
+	}
+	#mapaFull{
+		left: 2%;
+	    width: 95%;
+	}
 }
 
 //TELÉFONO HORIZONTAL

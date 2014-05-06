@@ -1,58 +1,82 @@
 <?php get_header() ?>
 
-	<div id="container">
-		<div id="content">
+<div class="container">
+    <div class="margin-top-fix"></div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="entry-header">
+          <h2><?php the_title(); ?></h2>
+          <aside>
+            <ul>
+              <li><?php the_time ('l j \d\e\ F, Y'); ?></li>
+              <li>por: <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author_meta( 'user_login' ); ?></a></li>
+            </ul>
+          </aside>
+        </div>
+        <p class="text-justify"><?php the_content(); ?></p>
+      </div>
+    </div>
 
-<?php the_post() ?>
+    
+    <div class="row">
+      <div class="col-md-9">
+        <div class="alinearderecha topp">
+          <button type="button" class="btn btn-default btn-sm">
+              <a href="https://www.facebook.com/Vergel439?fref=ts"> 
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumbs-up.png">
+              </a>
+          </button>
+        </div>
+      </div>
+    </div>
 
-			<div id="nav-above" class="navigation">
-				<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
-			</div>
 
-			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-				<h2 class="entry-title"><?php the_title() ?></h2>
-				<div class="entry-content">
-					<?php the_content() ?>
-					<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
+      <div class="row">
+        <div class="encabezado"><h3>Más <?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3></div>
+			<?php
+			$category = get_the_category(); //Obtengo el ID de la categoría del post
+			$this_post = $post->ID;
+			$posts = get_posts('numberposts=4&orderby=rand&category=' . $category[0]->cat_ID . '&exclude=' . $this_post);
+			foreach($posts as $post) { ?>
+	
+		        <div class="col-md-3">
+					<a href="<?php the_permalink() ?>">
+		                <div class="thumbnail">
+		                	<?php the_post_thumbnail('medium');?>
+		                    <div class="caption">
+		                    	<h4><?php the_title(); ?></h4>
+		                        <h5><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></h5>
+		                    </div>
+						</div>
+	                </a>
 				</div>
-				
-				<div class="entry-meta">
-					<?php printf( __( 'This entry was written by %1$s, posted on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>, filed under %6$s%7$s. Bookmark the <a href="%8$s" title="Permalink to %9$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%10$s" title="Comments RSS to %9$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox' ),
-						'<span class="author vcard"><a class="url fn n" href="' . get_author_posts_url( false, $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( __( 'View all posts by %s', 'sandbox' ), $authordata->display_name ) . '">' . get_the_author() . '</a></span>',
-						get_the_time('Y-m-d'),
-						get_the_time('H:i:sO'),
-						the_date( '', '', '', false ),
-						get_the_time(),
-						get_the_category_list(', '),
-						get_the_tag_list( __( ' and tagged ', 'sandbox' ), ', ', '' ),
-						get_permalink(),
-						the_title_attribute('echo=0'),
-						get_post_comments_feed_link() ) ?>
+			<?php } wp_reset_postdata(); ?>
+		</div>	
+      <!-- fin segundo row -->
 
-						<?php if ( ('open' == $post->comment_status) && ('open' == $post->ping_status) ) : // Comments and trackbacks open ?>
-											<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox' ), get_trackback_url() ) ?>
-						<?php elseif ( !('open' == $post->comment_status) && ('open' == $post->ping_status) ) : // Only trackbacks open ?>
-											<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'sandbox' ), get_trackback_url() ) ?>
-						<?php elseif ( ('open' == $post->comment_status) && !('open' == $post->ping_status) ) : // Only comments open ?>
-											<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'sandbox' ) ?>
-						<?php elseif ( !('open' == $post->comment_status) && !('open' == $post->ping_status) ) : // Comments and trackbacks closed ?>
-											<?php _e( 'Both comments and trackbacks are currently closed.', 'sandbox' ) ?>
-						<?php endif; ?>
-						<?php edit_post_link( __( 'Edit', 'sandbox' ), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>" ) ?>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="encabezado"><h4>Deja tu comentario</h4></div>
+          <div class="form-group">
+         	 <?php comments_template() ?>
+         	 <!--  
+                <textarea class="form-control" rows="3"></textarea>
+             -->   
+          </div>
+         	 <!--  
+              <button type="submit" class="btn btn-default">Comenta</button>
+             -->         
+        </div>
+        
 
-				</div>
-			</div><!-- .post -->
 
-			<div id="nav-below" class="navigation">
-				<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
-			</div>
+      </div>
 
-<?php comments_template() ?>
 
-		</div><!-- #content -->
-	</div><!-- #container -->
+  </div> <!--cierre de container-->
 
-<?php get_sidebar() ?>
+
+
+
+
 <?php get_footer() ?>
