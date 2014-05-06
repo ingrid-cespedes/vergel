@@ -47,7 +47,7 @@
 
 
         <div class="row">
-          <div class="encabezado"><h3>Últimos Aportes</h3></div>
+          <div class="encabezado"><h3>Último Aporte</h3></div>
 			<?php query_posts('category_name=ideas&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
