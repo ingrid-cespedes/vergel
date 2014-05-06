@@ -9,14 +9,30 @@
 
 .navbar-brand{
 	padding: 18.33px 30px;
+	img{
+		max-width: 50px;
+	}
+}
 
+
+.entry-header{
+
+	aside{
+		color: @gray-light;
+		ul{
+			margin: @line-height-computed*.75 0;
+			padding: 0;
+			font-size: 12px;
+			li{
+				display: inline;
+				margin-left: 20px;
+				&:first-child{margin-left: 0}
+			}
+		}
+	}
 }
-.navbar-brand img{
-	max-width: 50px;
-}
-.nav li a:hover{
-	color:red	
-}
+
+
 .paddingcontainer{ 
 	padding-top:200px;
  }
@@ -36,24 +52,25 @@
 	margin-top: 20px;
 }
 
-footer{
-	background-color: #353535;
-	height: 140px;
-	margin-top: 100px;
-	color: #FFFFFF;
-	position: relative;
-	bottom:0;
-	width: 100%;
+
+.push-footer{
+	margin-bottom: @footer-height;
 }
 
-footer a{
-	color: #09a3b2;
-	}
+footer{
+	position: relative;
+	background-color: @semi-black;
+	margin-top: 100px;
+	height: @footer-height;
+	color: #FFFFFF;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
 
-footer .container{
-	position: fixed-bottom;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+	.container{
+		bottom: 50px;
+
+	}
 }
 
 .row{
@@ -65,8 +82,8 @@ footer img{
 	height: 25px;
 }
 
-.margensuperior{
-	margin-top: 200px;
+.margin-top-fix{
+	margin-top: 87px !important;
 }
 
 .alinearderecha{
@@ -76,18 +93,16 @@ footer img{
 .btn-group {
 	margin-top:-45px
 }
-.pagination{
-	margin:0 auto;
-}
 
 .topp{
 	margin-top: 20px;
 }
 
-.col-md-3 a{
+.col-md-6 a{
 	text-decoration:none;
 }
 
+<<<<<<< HEAD
 .col-md-4 a{
 	text-decoration:none;
 }
@@ -112,23 +127,32 @@ footer img{
 .btn-default {
 	background-color:#f49f5c;
 }
+=======
+>>>>>>> develop
 
-.btn-default:hover{
-	background-color:#09A3B2;
+.col-md-6 a:hover{
+	color:@naranjo;
 }
 >>>>>>> develop
 
+<<<<<<< HEAD
 }
 
 .containerdibujo{
 	background-image: url("../img/croquis6.png");
+=======
+.background-croquis{
+	background-image: url("@{img-path}croquis6.png");
+>>>>>>> develop
 	background-repeat: no-repeat;
+	background-position: center left;
+	background-color: #FDFDFD;
 	
 }
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
-@media (max-width:361px){
-	.margensuperior{margin-top: 100px;}
+@media (max-width: @screen-xs){
+	.margin-top-fix{margin-top: 100px;}
 	.logo{
 	margin-left: auto;
 	}
@@ -158,8 +182,8 @@ footer img{
 
 //TELÉFONO HORIZONTAL
 
-@media (max-width:500px){
-	.margensuperior{margin-top: 100px;}
+@media (max-width: @screen-sm){
+	.margin-top-fix{margin-top: @navbar-height;}
 	.logo{
 	margin-left: auto;
 	}

@@ -12,13 +12,18 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @black:					#000;
+@semi-black:			fade(@black, 90);
 @gray-darker:           lighten(#000, 13.5%); // #222
 @gray-dark:             lighten(#000, 20%);   // #333
 @gray:                  lighten(#000, 33.5%); // #555
 @gray-light:            lighten(#000, 60%);   // #999
 @gray-lighter:          lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #428bca;
+@azul:					@gray-darker*4;
+@naranjo:				#b81823;
+
+
+@brand-primary:         @azul; // #428bca;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -45,12 +50,12 @@
 //## Font, line-height, and color for body text, headings, and more.
 
 @font-family-sans-serif:  "Open Sans"; // "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-serif:       "Merriweather", Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          13px;
+@font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -67,11 +72,13 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    @font-family-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @naranjo;
 
+
+@footer-height:				140px;
 
 //== Iconography
 //
@@ -151,7 +158,7 @@
 @btn-default-border:             #ccc;
 
 @btn-primary-color:              #fff;
-@btn-primary-bg:                 @brand-primary;
+@btn-primary-bg:                 @naranjo;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 @btn-success-color:              #fff;
@@ -226,7 +233,7 @@
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-dark;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      @naranjo;
 //** Hover background for dropdown links.
 @dropdown-link-hover-bg:         #f5f5f5;
 
@@ -374,12 +381,12 @@
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
-@navbar-inverse-bg:                         #222;
+@navbar-inverse-bg:                         @semi-black;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @gray-light;
-@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-color:           @naranjo;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
