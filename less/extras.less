@@ -194,6 +194,7 @@ footer img{
 	}
 }
 
+
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width: @screen-xs){
@@ -262,4 +263,72 @@ footer img{
 }
 }
 
+
+
+//ESTA ES LA CASCADA DE PRENSA//
+.prensa{
+	h1{
+	    font-family: @font-family-serif;
+	    font-size: 24px;
+	    text-align: left; 
+	    line-height: 200%;
+	    color: @rojo;
+	    letter-spacing: 2;
+	    background-color: none;
+	    padding-right: 20%;
+	    font-weight: normal;
+	}
+
+	h2{
+	    font-family: @font-family-sans-serif;
+	    font-size: 10px;
+	    text-align: left; 
+	    line-height: 150%;
+	    color: gray;
+	    letter-spacing: 3;
+	    background-color: none;
+	    padding-right: 20%;
+	    font-weight: lighter;
+	}
+	h3{
+	    font-family: @font-family-sans-serif;
+	    font-size: @font-size-base;//14px//
+	    font-style: bold;
+	    text-align: left; 
+	    line-height: 200%;
+	    color: gray;
+	    letter-spacing: 3;
+	    background-color: none;
+	    padding-right: 20%;
+	}
+
+	.ficha-prensa{
+		ul{
+			background-color: #eee;
+		    padding: 20px;
+		    font-size: 12px;
+		    font-family: @font-family-sans-serif;
+		    border-radius: 4px;
+		    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
+		    line-height: 200%;
+
+			li{
+				list-style-type: none;
+				.label{
+					display: inline-block;
+    				width: 90px;
+    				text-align: right;
+    				max-height: 5px;
+    				font-weight: bolder;
+    				a{
+    					color: @rojo;
+    				}
+             	}
+			}
+		}
+	}
+
+             	
+}
+//Fin de CASCADA//
 
