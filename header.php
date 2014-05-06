@@ -9,7 +9,7 @@
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
-	<link rel="shorcut icon" href="../img/favicon.icon">
+	<link rel="shortcut icon" href="../img/favicon.icon" type="image/x-icon"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
