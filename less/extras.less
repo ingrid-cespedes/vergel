@@ -19,7 +19,7 @@ html{
 	margin: 0 20px 50px;
 	color: @white;
 	&.btn-registrate{
-		background-color:@rojo;
+		background-color:lighten(@rojo, 10);
 		&:hover{
 			color: @white;
 			background-color: lighten(@rojo, 20);
@@ -29,7 +29,7 @@ html{
 		background-color:@rojo;
 		&:hover{
 			color: @white;
-			background-color: @rojo;
+			background-color:lighten(@rojo, 20%);
 		}
 	}
 }
@@ -56,15 +56,17 @@ html{
   	font-size: @font-size-large;
   	line-height: @line-height-computed;
   	height: @navbar-height;
-  	&hover{
-  		border-bottom: 2px solid @rojo;
-  	}
+  	
 }
 
 .navbar-brand{
 	padding: 18.33px 30px;
 	img{
 		max-width: 50px;
+		&hover{
+  		color: @rojo;
+  		text-decoration: underline;
+  		}
 	}
 }
 
