@@ -20,7 +20,13 @@
         font-size: @jumbotron-font-size;
         font-weight: 200;
     }
-    a{color: @white}
+    a{
+        color: @white;
+        font-weight: 900;
+        &:hover{
+            text-shadow: 2px 2px 0 @black;
+        }
+    }
     > hr {
         border-top-color: darken(@jumbotron-bg, 10%);
     }
