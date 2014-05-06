@@ -11,23 +11,26 @@ html{
 }
 
 .btn-rnd{
-	.size(120px, 120px);
+	.size(130px, 130px);
 	font-size: 20px;
 	text-shadow: 2px 2px 0 fade(@black, 20);
-	padding: 43px 0;
+	padding: 48px 0;
 	border-radius: 50%;
 	margin: 0 20px 50px;
 	color: @white;
-	&:hover{
-		color: @white;
-		background-color: darken(#1f8cd0, 30);
-	}
 	&.btn-registrate{
-		background-color: #70bee7 !important;
-
+		background-color: lighten(@rojo, 10);
+		&:hover{
+			color: @white;
+			background-color: lighten(@rojo, 20);
+		}
 	}
 	&.btn-participa{
-		background-color: #1f8cd0 !important;
+		background-color: darken(@rojo, 10);
+		&:hover{
+			color: @white;
+			background-color: @rojo;
+		}
 	}
 }
 
@@ -140,7 +143,7 @@ footer img{
 }
 
 .margin-top-fix{
-	margin-top: 87px !important;
+	margin-top: 87px;
 }
 
 .alinearderecha{
@@ -186,7 +189,9 @@ footer img{
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width: @screen-xs){
-	.margin-top-fix{margin-top: 100px;}
+	.margin-top-fix{
+		margin-top: 70px;
+	}
 	.logo{
 	margin-left: auto;
 	}
