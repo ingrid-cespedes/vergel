@@ -10,8 +10,8 @@
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	
-	<link rel="shortcut icon" href="<?php get_template_directory_uri() ?>/img/favicon.icon" type="image/x-icon"/>
-	<link rel="shortcut icon" href="<?php get_template_directory_uri() ?>/img/favicon.png" type="image/png"/>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicon.icon" type="image/x-icon"/>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicon.png" type="image/png"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
