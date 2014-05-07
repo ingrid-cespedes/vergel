@@ -47,8 +47,8 @@
 
 
         <div class="row">
-          <div class="encabezado"><h3>Últimos Aportes</h3></div>
-			<?php query_posts('category_name=ideas&showposts=4'); ?>
+          <div class="encabezado"><h3>Últimos Relatos</h3></div>
+			<?php query_posts('category_name=relatos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
 						<a href="<?php the_permalink() ?>">
@@ -67,8 +67,8 @@
 
 
         <div class="row">
-          <div class="encabezado"><h3>Últimos Relatos</h3></div>
-			<?php query_posts('category_name=relatos&showposts=4'); ?>
+          <div class="encabezado"><h3>Últimos Artículos</h3></div>
+			<?php query_posts('category_name=articulos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
 						<a href="<?php the_permalink() ?>">
