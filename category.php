@@ -26,7 +26,7 @@
 
       <!--  <div class="row"> -->
 		<?php
-		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+		  $paged = get_query_var('paged') ? get_query_var('paged') : 4;
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
 		?>
