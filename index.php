@@ -67,7 +67,7 @@
 
 
         <div class="row">
-          <div class="encabezado"><h3>Últimos Artículos</h3></div>
+          <!--<div class="encabezado"><h3>Últimos Artículos</h3></div>
 			<?php query_posts('category_name=articulos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
@@ -81,7 +81,7 @@
 							</div>
 		                </a>
 					</div>
-			<?php endwhile; ?>
+			<?php endwhile; ?>-->
 		</div>
 		<!-- tercer row cerrado-->
 
