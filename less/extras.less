@@ -237,7 +237,7 @@ footer img{
 		padding: 6px 12px
 }
 //Esto es el botón de de añadir usuario.
-#addusersub,#updateuser,{
+#addusersub,#updateuser{
 	-moz-user-selection:none;
 	float: right;
 	color:white;
@@ -257,14 +257,28 @@ footer img{
 	vertical-align: middle;
 	white-space: nowrap;
 }
+#addusersub:hover{
+	background-color: lighten(@rojo, 10%)
+}
+
 .wp-pagenavi{
-	margin-bottom: 100px
+	margin-bottom: 50px
 }
 
 .wp-pagenavi a,{
 	color:@rojo;
 }
+//esto es footer max widht
 
+footer ul li a:hover{
+	text-decoration: none;
+	color:lighten(@rojo, 10%);
+	background-color:black;
+}
+
+footer .nav li a:hover,.nav li a:focus{
+	background-color:black;
+}
 
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
