@@ -12,7 +12,7 @@
 
 		<?php
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
+		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged, 'showposts' => 4));
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
 		?>
         <div class="col-lg-3">
@@ -23,7 +23,7 @@
                     <div class="caption">
                     	<h4><?php the_title(); ?></h4>
 						<aside><?php the_time ('l j F, Y'); ?></aside>
-                        <p><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></p>
+                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
                     </div>
                     </a>
 				</div>
