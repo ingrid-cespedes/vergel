@@ -29,7 +29,6 @@
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
-		  query_posts('category_name=relatos&showposts=4'); 
 		?>
 
 			        <div class="col-md-3">
