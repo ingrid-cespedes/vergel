@@ -25,7 +25,7 @@ Template Name: Archives Page
 						<li id="monthly-archives">
 							<h3><?php _e( 'Archives by Month', 'sandbox' ) ?></h3>
 							<ul>
-								<?php wp_get_archives('type=monthly&show_post_count=4') ?>
+								<?php wp_get_archives('type=monthly&show_post_count=1') ?>
 							</ul>
 						</li>
 					</ul>
