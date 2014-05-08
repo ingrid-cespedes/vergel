@@ -106,9 +106,13 @@ html{
 
 .encabezado{
 	font-weight: 400;
-	margin-bottom: 18px;
+	margin-bottom: 20px 0 0 0;
 	padding-left: 15px;
-	margin-top: 20px;
+
+	h3{
+		font-size: 42px;
+		font-weight: 100;
+	}
 }
 
 .push-footer{
@@ -147,7 +151,7 @@ footer{
 }
 
 .row{
-	margin-top: 60px;
+	margin-top: @margen-superior-fila;
 }
 
 footer img{
@@ -272,14 +276,41 @@ footer img{
 
 /*-------- Paginación */
 
-.wp-pagenavi{
-	margin-bottom: 50px;
+.pagination-custom{
+	text-align: right;
 
-	span,
-	a{
+	.wp-pagenavi{
+		margin-bottom: 50px;
+		span,
+		a{
+			padding: 5px 10px;
+			margin: 0;
+			border-top: 1px solid fade(@black, 20);
+			border-bottom: 1px solid fade(@black, 20);
+			border-left: 1px solid fade(@black, 20);
+			&:last-child{
+				border-right: 1px solid fade(@black, 20);
+				border-radius: 0 6px 6px 0;
+			}
+			&:first-child{
+				border-radius: 6px 0 0 6px;
+			}
+			&:hover{
+				text-decoration: none;
+				background-color: @rojo;
+				color: @blanco;
+			}
+			&.current{
+				border-bottom: 3px solid @rojo;
+			}
+		}
 
+		a{
+			color: @rojo;
+		}
 	}
 }
+
 
 
 //esto es footer max widht
@@ -367,6 +398,27 @@ footer  li.active{
 }
 }
 
+
+/* Archive post */
+
+.caption{
+
+	h4{
+		margin-bottom: 0;
+	}
+
+	aside{
+		margin: 5px 0;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: @gray;
+	}
+
+	&:hover{
+		background-color: @gray-lighter;
+		a{text-decoration: none !important;}
+	}
+}
 
 //ESTA ES LA FICHA DE PRENSA//
 

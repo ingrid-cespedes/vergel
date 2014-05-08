@@ -24,8 +24,12 @@
   // Add a hover state for linked versions only
   a&:hover,
   a&:focus,
-  a&.active {
+  a&.active{
     border-color: @link-color;
+  }
+  
+  a:hover {
+    text-decoration: none !important;
   }
 
   // Image captions
