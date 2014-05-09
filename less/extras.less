@@ -241,7 +241,7 @@ footer img{
 		padding: 6px 12px
 }
 //Esto es el botón de de añadir usuario.
-#addusersub,#updateuser,.btn-success{
+#addusersub,#updateuser,.btn-success,.button {
 	-moz-user-selection:none;
 	float: right;
 	color:white;
@@ -261,7 +261,11 @@ footer img{
 	vertical-align: middle;
 	white-space: nowrap;
 }
-
+.button:hover{
+	background-color: lighten(@rojo, 10%);
+	color:white;
+	border:1px solid lighten(@rojo, 10%)
+}
 
 #addusersub:hover{
 	background-color: lighten(@rojo, 10%)
@@ -377,7 +381,7 @@ footer  li.active{
 
 	footer{
 	text-align: center;
-	background-color: #353535;
+	background-color: black;
 	height: 200px;
 	margin-top: 200px;
 	color: #FFFFFF;
