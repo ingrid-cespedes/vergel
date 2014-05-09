@@ -22,11 +22,7 @@ Template Name: Página croquis de fondo
 			
 
 		<?php if (get_post_meta($post->ID, "sidebar", true)) { ?>
-			<div class="col-md-3">
-				<div class="cajaregistro">
-					<?php echo do_shortcode(get_post_meta($post->ID, "sidebar", true)); ?>
-				</div>
-			</div>
+		
 		<? } ?>				
 
 			
