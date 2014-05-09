@@ -34,7 +34,7 @@
 						<a href="<?php the_permalink() ?>">
 			                <div class="thumbnail">
 			                	<?php the_post_thumbnail('medium');?>
-			                    <div class="caption">
+			                    <div class="captiondos">
 			                    	<h4><?php the_title(); ?></h4>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
 			                    </div>
@@ -53,8 +53,8 @@
 			        <div class="col-md-3">
 						<a href="<?php the_permalink() ?>">
 			                <div class="thumbnail">
-			                	<?php the_post_thumbnail('medium');?>
-			                    <div class="caption">
+			                	<?php the_post_thumbnail('small');?>
+			                    <div class="captiondos">
 			                    	<h4><?php the_title(); ?></h4>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
 			                    </div>
