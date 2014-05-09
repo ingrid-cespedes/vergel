@@ -13,7 +13,7 @@ Template Name: Página croquis de fondo
 		<div class="row">
         	<div class="col-md-9">
 				<div class="thumbnail">
-                	<div class="caption">		
+                	<div class="captiondos">		
 						<h1><?php the_title() ?></h1>
 						<?php the_content() ?>
 					</div>
