@@ -36,6 +36,7 @@
 			                	<?php the_post_thumbnail('medium');?>
 			                    <div class="captiondos">
 			                    	<h4><?php the_title(); ?></h4>
+			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
 			                    </div>
 							</div>
@@ -56,6 +57,7 @@
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="captiondos">
 			                    	<h4><?php the_title(); ?></h4>
+			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
 			                    </div>
 							</div>
@@ -66,8 +68,8 @@
 		<!-- fin segundo row-->
 
 
-        <div class="row">
-          <!--<div class="encabezado"><h3>Últimos Artículos</h3></div>
+ <!--div class="row">
+         <div class="encabezado"><h3>Últimos Artículos</h3></div>
 			<?php query_posts('category_name=articulos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
@@ -81,8 +83,8 @@
 							</div>
 		                </a>
 					</div>
-			<?php endwhile; ?>-->
-		</div>
+			<?php endwhile; ?>
+		</div>-->
 		<!-- tercer row cerrado-->
 
     </div><!--cierre de container-->
