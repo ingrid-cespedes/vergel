@@ -67,7 +67,7 @@ html{
 }
 
 .navbar-brand{
-	padding: 18.33px 30px;
+	padding: 18.33px 5px;
 	img{
 		max-width: 50px;
 	}
@@ -128,7 +128,7 @@ html{
 
 
 footer{
-	position: relative;
+	position: fixed;
 	bottom: 0;
 	background-color: @black;
 	height: @footer-height;
@@ -284,6 +284,7 @@ footer img{
 	text-align: right;
 	.wp-pagenavi{
 			margin-bottom: 130px;
+			
 		span,
 		a{
 			padding: 5px 10px;
@@ -386,6 +387,7 @@ footer  li.active{
 	color: #FFFFFF;
 	bottom: 0;
 	font-size: 10px;
+	position: relative;
 	}
 
 	.jumbotron .container{
@@ -425,8 +427,19 @@ footer  li.active{
 .captiondos{
 	padding-left: 10px;
 	padding-right: 10px;
+
+
 }
 
+.thumbnail-dos{
+	display: block;
+  padding: @thumbnail-padding;
+  margin-bottom: @line-height-computed;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border:;
+  border-radius: @thumbnail-border-radius;
+}
 //ESTA ES LA FICHA DE PRENSA//
 
 
@@ -453,7 +466,7 @@ ul.ficha-prensa{
 			}
      	}
 
-		}        	
+	}        	
 }
 
 //Fin de CASCADA//

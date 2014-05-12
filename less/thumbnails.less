@@ -7,11 +7,13 @@
 .thumbnail {
   display: block;
   padding: @thumbnail-padding;
-  margin-bottom: @line-height-computed;
+  margin-bottom: @line-height-computed * 2;
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
   border:;
   border-radius: @thumbnail-border-radius;
+  height: 350px;
+
   .transition(all .2s ease-in-out);
 
   > img,
@@ -31,12 +33,6 @@
   a:hover {
     text-decoration: none !important;
   }
-
-
-  // Image captions
- 
-    
-    }
   }
 
 
