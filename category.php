@@ -16,7 +16,7 @@
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
 		?>
         <div class="col-lg-3">
-			
+			<div class="noticias">
                 <div class="thumbnail">
                 	<a href="<?php the_permalink() ?>">
                 	<?php the_post_thumbnail('medium');?>
@@ -27,7 +27,7 @@
                     </div>
                     </a>
 				</div>
-            
+           </div>
 		</div>
 	    <?php endwhile; wp_reset_postdata(); ?>
 
