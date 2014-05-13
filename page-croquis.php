@@ -16,7 +16,6 @@ Template Name: Página croquis de fondo
                 	<div class="captiondos">		
 						<h1><?php the_title() ?></h1>
 						<?php the_content() ?>
-							<div class="imagenvergel"></div>
 					</div>
 				</div>
 			</div>
