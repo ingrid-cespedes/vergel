@@ -31,8 +31,8 @@
 			<?php query_posts('category_name=prensa&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
-						<a href="<?php the_permalink() ?>">
 			                <div class="thumbnail">
+			                	<a href="<?php the_permalink() ?>">
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
@@ -52,8 +52,9 @@
 			<?php query_posts('category_name=relatos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
-						<a href="<?php the_permalink() ?>">
+
 			                <div class="thumbnail">
+			                	<a href="<?php the_permalink() ?>">
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
