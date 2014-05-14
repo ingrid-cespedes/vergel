@@ -28,8 +28,9 @@
 			foreach($posts as $post) { ?>
 	
 		        <div class="col-md-3">
-					<a href="<?php the_permalink() ?>">
+					
 		                <div class="thumbnail">
+                      <a href="<?php the_permalink() ?>">
 		                	<?php the_post_thumbnail('medium');?>
 		                    <div class="caption">
 		                    	<h4><?php the_title(); ?></h4>
