@@ -5,8 +5,9 @@
 <div class="jumbotron margin-top-fix">
     <div class="container">
 
-        <h1>Concurso de relatos e ideas</h1>
-        <p>Lee las <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Concurso' ) ) ); ?>">bases del concurso</a> y comparte tu experiencia</p>
+        <h1>Concurso de ideas y relatos</h1>
+        <p>Ideas para convertir las ruinas de Vergel 439 en un espacio socio-cultural</p>
+        <p>Lee las <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Concurso' ) ) ); ?>">bases aquí</a> </p>
 
 		<?php global $current_user; get_currentuserinfo(); if (is_user_logged_in () ) { ?>
     		<p>Ya estás registrado, ahora sólo te falta compartir tu historia.</p>
