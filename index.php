@@ -25,7 +25,28 @@
 <!-- Galería -->
 
     <div class="container">
+    	 <div class="row">
+          <div class="encabezado"><h3>Últimos Relatos</h3></div>
+			<?php query_posts('category_name=relatos&showposts=4'); ?>
+				<?php while (have_posts()) : the_post(); ?>
+			        <div class="col-md-3">
+
+			                <div class="thumbnailrelatos">
+			                	<a href="<?php the_permalink() ?>">
+			                	<?php the_post_thumbnail('small');?>
+			                    <div class="caption">
+			                    	<h4><?php the_title(); ?></h4>
+			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
+			                    </div>
+							</div>
+		                </a>
+					</div>
+			<?php endwhile; ?>
+		</div>
      
+      
+      <!-- fin primer row -->
       <div class="row">
         <div class="encabezado"><h3>Últimas Noticias</h3></div>
 			<?php query_posts('category_name=prensa&showposts=4'); ?>
@@ -44,28 +65,8 @@
 					</div>
 			<?php endwhile; ?>
       </div>
-      <!-- fin primer row -->
 
-
-        <div class="row">
-          <div class="encabezado"><h3>Últimos Relatos</h3></div>
-			<?php query_posts('category_name=relatos&showposts=4'); ?>
-				<?php while (have_posts()) : the_post(); ?>
-			        <div class="col-md-3">
-
-			                <div class="thumbnail">
-			                	<a href="<?php the_permalink() ?>">
-			                	<?php the_post_thumbnail('small');?>
-			                    <div class="caption">
-			                    	<h4><?php the_title(); ?></h4>
-			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
-			                    </div>
-							</div>
-		                </a>
-					</div>
-			<?php endwhile; ?>
-		</div>
+       
 		<!-- fin segundo row-->
 
 
