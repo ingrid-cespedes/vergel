@@ -31,13 +31,13 @@
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
 
-			                <div class="thumbnailrelatos">
+			                <div class="thumbnail-relatos">
 			                	<a href="<?php the_permalink() ?>">
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
 			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 25); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
