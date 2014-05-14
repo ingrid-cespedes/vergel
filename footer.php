@@ -8,7 +8,7 @@
                 'container'         => 'div',
                 'container_class'   => 'footer-menu',
         		'container_id'      => 'menu-secondary',
-                'menu_class'        => 'nav nav-pills',
+                'menu_class'        => 'nav navbar-nav',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
