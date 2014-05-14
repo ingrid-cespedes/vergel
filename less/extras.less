@@ -7,7 +7,18 @@ html{
 	.clearfix();
 	margin: 0;
 	padding: 0;
+	position: relative;
+	padding-bottom: 75%; // This is the aspect ratio
+	height: 0;
+	overflow: hidden;
 
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
 }
 
 .btn-rnd{
@@ -137,6 +148,7 @@ footer{
 	width: 100%;
 	text-align: center;
 	font-size: 12px;
+	margin-top: -10px;
 	.container{
 		bottom: 50px;
 	}
@@ -420,6 +432,7 @@ footer  li.active{
 	padding: 10px 30px;
 
 	}
+
 	#mapaFull{
 		left: 2%;
 	    width: 95%;
