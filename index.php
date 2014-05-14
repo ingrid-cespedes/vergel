@@ -66,7 +66,6 @@
 			<?php endwhile; ?>
       </div>
 
-       
 		<!-- fin segundo row-->
 
 
