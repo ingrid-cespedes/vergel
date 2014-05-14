@@ -48,7 +48,7 @@
       
       <!-- fin primer row -->
       <div class="row">
-        <div class="encabezado"><h3>Últimas Noticias</h3></div>
+        <div class="encabezado"><h3>Prensa Relacionada</h3></div>
 			<?php query_posts('category_name=prensa&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
