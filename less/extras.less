@@ -289,12 +289,15 @@ footer img{
 		a{
 			padding: 5px 10px;
 			margin-top: 10;
+			margin-left: 0px;
+			margin-right: 0px;
 			border-top: 1px solid fade(@black, 20);
 			border-bottom: 1px solid fade(@black, 20);
 			border-left: 1px solid fade(@black, 20);
 			&:last-child{
 				border-right: 1px solid fade(@black, 20);
 				border-radius: 0 6px 6px 0;
+
 			}
 			&:first-child{
 				border-radius: 6px 0 0 6px;
@@ -303,9 +306,17 @@ footer img{
 				text-decoration: none;
 				background-color: @rojo;
 				color: @blanco;
+				border-bottom: 1px solid fade(@black, 20);
+				border-top:1px solid fade(@black, 20);
+				border-left:1px solid fade(@black, 20);
+				border-right:1px solid fade(@black, 20);
+
 			}
 			&.current{
 				border-bottom: 3px solid @rojo;
+				border-top:1px solid fade(@black, 20);
+				border-left:1px solid fade(@black, 20);
+				border-right:1px solid fade(@black, 20);
 
 			}
 		}
@@ -333,7 +344,43 @@ footer .nav li a:hover,.nav li a:focus{
 footer  li.active{
 	background-color:black!important;
 }
+//PLUGIN FACE AND TWITT
+.main_social{
+		.facebook_left{
+				border-color:@rojo;
+				height: 300px;
+			.c_facebook{
+				background: @rojo;
+			._4s7c{
+				border-left: none;			
+		}
+		}
+		}
+}
 
+.main_social{
+
+		.twitter_left{
+				border-color:lighten(@rojo, 20%);
+				height: 260px;	
+					.connect_top{
+						background: @white;
+					}
+			.full_widget{
+				border:1px solid lighten(@rojo, 10%);
+			}
+			.c_twitter{
+				background: lighten(@rojo, 20%);
+			}
+			footer{
+				display: none;
+			}
+		}
+		.hidebar{
+			background:lighten(@rojo, 20%);
+		}
+		}
+	
 
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
@@ -463,6 +510,13 @@ footer  li.active{
   border:;
   border-radius: @thumbnail-border-radius;
 }
+
+
+.alignnone{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 60px;
+}
 //ESTA ES LA FICHA DE PRENSA//
 
 
@@ -491,6 +545,8 @@ ul.ficha-prensa{
 
 	}        	
 }
+
+
 
 //Fin de CASCADA//
 
