@@ -484,6 +484,7 @@ footer  li.active{
 	padding: 2px 5px;
 	h4{
 		margin-bottom: 0;
+		line-height: @line-height-large;
 	}
 
 	aside{
@@ -513,8 +514,10 @@ footer  li.active{
   margin-bottom: @line-height-computed;
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
-  border:;
   border-radius: @thumbnail-border-radius;
+  a{
+  	color: darken(black, 80%)
+  }
 }
 
 .thumbnail-relatos{
@@ -560,7 +563,9 @@ ul.ficha-prensa{
 	}        	
 }
 
-
+#pluginby{
+	display:none;
+}
 
 //Fin de CASCADA//
 
