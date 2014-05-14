@@ -116,7 +116,7 @@ html{
 
 .encabezado{
 	font-weight: 400;
-	margin-bottom: 20px 0 0 0;
+	margin-bottom: 50px;
 	padding-left: 15px;
 
 	h3{
@@ -141,7 +141,7 @@ footer{
 	position: relative;
 	bottom: 0;
 	background-color: @black;
-	height: @footer-height;
+	height: @footer-height/1.5;
 	color: #FFFFFF;
 	bottom: 0;
 	width: 100%;
@@ -154,7 +154,7 @@ footer{
 
 	#menu-menu-de-pie-de-pagina{
 		text-align: left;
-		margin-top: 50px;
+		margin:25px;
 		&.nav > li > a{
 			padding: 6px 12px !important;
 		}
@@ -360,6 +360,7 @@ footer  li.active{
 		.facebook_left{
 				border-color:@rojo;
 				height: 320px!important;
+				top:50%;
 				iframe{
 					height: 320px!important;
 				}
@@ -390,10 +391,10 @@ footer  li.active{
 				display: none;
 			}
 		}
-		.hidebar{
-			background:lighten(@rojo, 20%);
+			.hidebar{
+				background:lighten(@rojo, 20%);
 		}
-		}
+}
 	
 
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
@@ -483,6 +484,7 @@ footer  li.active{
 	}
 	.main_social{
 		display: none;
+		top:50%;
 	}
 }
 
@@ -490,9 +492,12 @@ footer  li.active{
 /* Archive post */
 
 .caption{
+	padding: 2px 5px;
 
-	h4{
+	h5{
 		margin-bottom: 0;
+		line-height: @line-height-base;
+	
 	}
 
 	aside{
@@ -500,6 +505,7 @@ footer  li.active{
 		font-size: 12px;
 		text-transform: uppercase;
 		color: @gray;
+		
 	}
 
 	&:hover{
@@ -525,6 +531,15 @@ footer  li.active{
   border-radius: @thumbnail-border-radius;
 }
 
+
+.thumbnail-relatos{
+	height: 150px;
+	 margin-bottom: @line-height-computed *4.5;
+	 a:hover {
+    text-decoration: none !important;
+  }
+	 
+}
 
 .alignnone{
 	width: 100%;
