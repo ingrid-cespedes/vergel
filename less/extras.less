@@ -380,10 +380,10 @@ footer  li.active{
 				display: none;
 			}
 		}
-		.hidebar{
-			background:lighten(@rojo, 20%);
+			.hidebar{
+				background:lighten(@rojo, 20%);
 		}
-		}
+}
 	
 
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
@@ -484,7 +484,6 @@ footer  li.active{
 	padding: 2px 5px;
 	h4{
 		margin-bottom: 0;
-		line-height: @line-height-large;
 	}
 
 	aside{
@@ -514,20 +513,18 @@ footer  li.active{
   margin-bottom: @line-height-computed;
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
+  border:;
   border-radius: @thumbnail-border-radius;
-  a{
-  	color: darken(black, 80%)
-  }
 }
+
 
 .thumbnail-relatos{
 	height: 150px;
 	 margin-bottom: @line-height-computed *4.5;
-	a:hover {
-    text-decoration: none !important;
-  }
 }
-
+#pluginby{
+	display:none;
+}
 
 .alignnone{
 	width: 100%;
@@ -563,9 +560,7 @@ ul.ficha-prensa{
 	}        	
 }
 
-#pluginby{
-	display:none;
-}
+
 
 //Fin de CASCADA//
 
