@@ -17,18 +17,6 @@
       </div>
     </div>
 
-    
-    <div class="row">
-      <div class="col-md-9">
-        <div class="alinearderecha topp">
-          <button type="button" class="btn btn-default btn-sm">
-              <a href="https://www.facebook.com/Vergel439?fref=ts"> 
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/thumbs-up.png">
-              </a>
-          </button>
-        </div>
-      </div>
-    </div>
 
 
       <div class="row">
@@ -45,7 +33,7 @@
 		                	<?php the_post_thumbnail('medium');?>
 		                    <div class="caption">
 		                    	<h4><?php the_title(); ?></h4>
-		                        <h5><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></h5>
+		                        <p><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></p>
 		                    </div>
 						</div>
 	                </a>
