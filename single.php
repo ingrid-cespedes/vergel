@@ -33,7 +33,7 @@
                       <a href="<?php the_permalink() ?>">
 		                	<?php the_post_thumbnail('medium');?>
 		                    <div class="caption">
-		                    	<h4><?php the_title(); ?></h4>
+		                    	<h5><?php the_title(); ?></h5>
 		                        <p><?php echo string_limit_words(get_the_excerpt(), 10); echo '...' ?></p>
 		                    </div>
 						</div>
@@ -45,7 +45,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <div class="encabezado"><h4>Deja tu comentario</h4></div>
+          <div class="encabezado"><h5>Deja tu comentario</h5></div>
           <div class="form-group">
          	 <?php comments_template() ?>
          	 <!--  
