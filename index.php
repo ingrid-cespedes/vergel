@@ -32,9 +32,9 @@
 			<?php query_posts('category_name=ideas&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
-						<a href="<?php the_permalink() ?>">
+						
 			                <div class="thumbnail-relatos">
-			                	
+			                	<a href="<?php the_permalink() ?>">
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
