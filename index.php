@@ -34,7 +34,7 @@
 			        <div class="col-md-3">
 						<a href="<?php the_permalink() ?>">
 			                <div class="thumbnail-relatos">
-			                	<?php the_post_thumbnail('medium');?>
+			                	
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
 			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
@@ -45,7 +45,7 @@
 			<?php endwhile; ?>
 		</div>
 
-		
+
     	 <div class="row">
           <div class="encabezado"><h3>Últimos Relatos</h3></div>
 			<?php query_posts('category_name=relatos&showposts=4'); ?>
