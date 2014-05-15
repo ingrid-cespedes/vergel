@@ -26,6 +26,26 @@
 <!-- Galería -->
 
     <div class="container">
+
+    	 <div class="row">
+         <div class="encabezado"><h3>Últimas Ideas</h3></div>
+			<?php query_posts('category_name=ideas&showposts=4'); ?>
+				<?php while (have_posts()) : the_post(); ?>
+			        <div class="col-md-3">
+						<a href="<?php the_permalink() ?>">
+			                <div class="thumbnail-relatos">
+			                	<?php the_post_thumbnail('medium');?>
+			                    <div class="caption">
+			                    	<h4><?php the_title(); ?></h4>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
+			                    </div>
+							</div>
+		                </a>
+					</div>
+			<?php endwhile; ?>
+		</div>
+
+		
     	 <div class="row">
           <div class="encabezado"><h3>Últimos Relatos</h3></div>
 			<?php query_posts('category_name=relatos&showposts=4'); ?>
@@ -70,23 +90,7 @@
 		<!-- fin segundo row-->
 
 
- <!--div class="row">
-         <div class="encabezado"><h3>Últimos Artículos</h3></div>
-			<?php query_posts('category_name=articulos&showposts=4'); ?>
-				<?php while (have_posts()) : the_post(); ?>
-			        <div class="col-md-3">
-						<a href="<?php the_permalink() ?>">
-			                <div class="thumbnail">
-			                	<?php the_post_thumbnail('medium');?>
-			                    <div class="caption">
-			                    	<h4><?php the_title(); ?></h4>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
-			                    </div>
-							</div>
-		                </a>
-					</div>
-			<?php endwhile; ?>
-		</div>-->
+
 		<!-- tercer row cerrado-->
 
     </div><!--cierre de container-->
