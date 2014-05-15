@@ -464,7 +464,7 @@ function sandbox_widgets_init() {
         'before_widget' => '<ul id="widget-footer"><li class="widget-footer">',
         'after_widget' => '</li></ul>',
         'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        
     ) );
 
 	if ( !function_exists('register_sidebars') )
