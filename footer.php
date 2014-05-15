@@ -19,7 +19,6 @@
 
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
 
-            Faceboof
 
              <?php endif; ?>
 
