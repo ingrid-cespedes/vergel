@@ -15,6 +15,12 @@
         </div>
         <p class="text-justify"><?php the_content(); ?></p>
       </div>
+
+      <div class="col-md-3">
+        <div class="entry-header">
+          [most_liked_posts limit="X" time="Y"]
+        </div>
+      </div>
     </div>
 
 
