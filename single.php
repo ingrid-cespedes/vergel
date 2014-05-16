@@ -18,7 +18,13 @@
 
       <div class="col-md-3">
         <div class="entry-header">
-          [most_liked_posts limit="X" time="Y"]
+          <div class="redsocial">
+
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
+
+
+             <?php endif; ?>
+          
         </div>
       </div>
     </div>
