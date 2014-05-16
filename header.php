@@ -19,6 +19,8 @@
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
+
+	
 	<header>
 	  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">

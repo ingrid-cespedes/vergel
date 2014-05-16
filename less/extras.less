@@ -138,11 +138,11 @@ html{
 
 
 footer{
+	.clearfix;
 	position: relative;
 	bottom: 0;
 	background-color: @black;
 	height: @footer-height/1.5;
-	color: #FFFFFF;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
@@ -150,7 +150,27 @@ footer{
 	margin-top: -5px;
 	.container{
 		bottom: 50px;
-	}
+		.redsocial{
+			margin-top: 30px;
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 25px;
+				height: 25px;
+				text-align: right;
+				padding: 0 5 0 5;
+
+				
+			}
+			
+					
+				}
+				
+			}
+			
+		}
+
 
 	#menu-menu-de-pie-de-pagina{
 		text-align: left;
@@ -165,10 +185,7 @@ footer{
 	margin-top: @margen-superior-fila;
 }
 
-footer img{
-	width: 25px;
-	height: 25px;
-}
+
 
 .margin-top-fix{
 	margin-top: 87px;
@@ -393,6 +410,7 @@ footer  li.active{
 		}
 			.hidebar{
 				background:lighten(@rojo, 20%);
+				height: 35px;
 		}
 }
 	
@@ -413,15 +431,35 @@ footer  li.active{
 		max-width: 50px;
 	}
 	}
+	
 
 	footer{
+
 		text-align: center;
 		background-color: #353535;
 		height: 200px;
-		margin-top: 50px;
+		margin-top: 40px;
 		color: #FFFFFF;
 		bottom: 0;
 		font-size: 10px;
+		line-height: 2px;
+		.redsocial{
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 30px;
+				height: 30px;
+				text-align: left;
+				
+			}
+			
+					
+				}
+				
+			}
+	
+
 	}
 
 	.jumbotron .container{
@@ -474,6 +512,22 @@ footer  li.active{
 	color: #FFFFFF;
 	bottom: 0;
 	font-size: 10px;
+	.redsocial{
+			
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 30px;
+				height: 30px;
+				text-align: right;
+				
+			}
+			
+					
+				}
+				
+			}
 	}
 
 	.jumbotron .container{
@@ -542,9 +596,9 @@ footer  li.active{
 }
 
 .alignnone{
-	width: 100%;
-	height: 100%;
-	margin-bottom: 60px;
+	
+	margin-bottom: 20px;
+
 }
 //ESTA ES LA FICHA DE PRENSA//
 
