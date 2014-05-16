@@ -593,15 +593,17 @@ footer  li.active{
 
 
 .sidebar-derecha{
-	height: auto;
+	height: 400px;
 	margin: 0 2px;
 	padding: 5px;
 	background-color: @gray-lighter;
 	
 	.wti-most-liked-posts{
-		text-decoration: none;
+		list-style: none;
 		li.wti-most-liked-posts{
-			list-style: none;
+			&:hover{
+				text-decoration: none;
+			}
 		}
 	}
 }
@@ -626,8 +628,9 @@ ul.ficha-prensa{
 			text-align: right;
 			max-height: 5px;
 			font-weight: bolder;
-			color: @rojo;
-			
+			a{
+				color: @rojo;
+			}
      	}
 
 	}        	

@@ -474,7 +474,7 @@ function sandbox_widgets_init() {
         'description' => __( 'los más votados', '' ),
         'before_widget' => '<ul id="widget-derecha"><li class="widget-derecha">',
         'after_widget' => '</li></ul>',
-        'before_title' => '<h2>',
+        'before_title' => '<h4>',
         
     ) );
 
