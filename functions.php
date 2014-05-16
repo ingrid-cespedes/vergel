@@ -471,7 +471,7 @@ function sandbox_widgets_init() {
         'name' => __( 'Sidebar-derecha', '' ),
         'id' => 'widget-derecha',
         'description' => __( 'los más votados', '' ),
-        'before_widget' => '<ul id="widget-footer"><li class="widget-footer">',
+        'before_widget' => '<ul id="widget-derecha"><li class="widget-derecha">',
         'after_widget' => '</li></ul>',
         'before_title' => '<h2>',
         

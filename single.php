@@ -19,7 +19,7 @@
       <div class="col-md-3">
         <div class="entry-header">
 
-          <div class="sidebar-derecha">
+          <div class="widget-derecha">
 
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
 
