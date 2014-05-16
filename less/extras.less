@@ -595,7 +595,7 @@ footer  li.active{
 	height: 400px;
 	margin: 0 2px;
 	padding: 5px;
-	background-color: @gray-lighter;
+	background-color:lighten(@gray, 60%);
 		h4, .h4 {
 		margin: 0 25px;
 	}
@@ -604,8 +604,10 @@ footer  li.active{
 		line-height: 40px;
 		margin: 0 25px;
 		li.wti-most-liked-posts{
+			
 			&:hover{
 				text-decoration: none !important;
+				color: @rojo;
 			}
 		}
 	}
