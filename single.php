@@ -47,7 +47,7 @@
 		                	<?php the_post_thumbnail('medium');?>
 		                    <div class="caption">
 		                    	<h5><?php the_title(); ?></h5>
-		                        <p><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
+		                        <p><?php echo string_limit_words(get_the_excerpt(), 20); echo '...' ?></p>
 		                    </div>
 						</div>
 	                </a>

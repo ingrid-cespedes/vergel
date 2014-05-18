@@ -76,7 +76,7 @@
 			                    <div class="caption">
 			                    	<h5><?php the_title(); ?></h5>
 			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 20); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
