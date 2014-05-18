@@ -464,7 +464,18 @@ function sandbox_widgets_init() {
         'before_widget' => '<ul id="widget-footer"><li class="widget-footer">',
         'after_widget' => '</li></ul>',
         'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        
+    ) );
+
+   register_sidebar( array(
+        'name' => __( 'Sidebar-derecha', '' ),
+        'id' => 'widget-derecha',
+        'class' => 'sidebar-derecha',
+        'description' => __( 'los más votados', '' ),
+        'before_widget' => '<ul id="widget-derecha"><li class="widget-derecha">',
+        'after_widget' => '</li></ul>',
+        'before_title' => '<h4>',
+        
     ) );
 
 	if ( !function_exists('register_sidebars') )

@@ -2,7 +2,6 @@
 html{
 	height: 100%;
 }
-
 .map-container{
 	.clearfix();
 	margin: 0;
@@ -11,25 +10,30 @@ html{
 }
 
 .btn-rnd{
-	.size(120px, 120px);
+	.size(130px, 130px);
 	font-size: 20px;
 	text-shadow: 2px 2px 0 fade(@black, 20);
-	padding: 43px 0;
+	padding: 48px 0;
 	border-radius: 50%;
 	margin: 0 20px 50px;
 	color: @white;
-	&:hover{
-		color: @white;
-		background-color: darken(#1f8cd0, 30);
-	}
 	&.btn-registrate{
-		background-color: #70bee7 !important;
-
+		background-color:lighten(@rojo, 15);
+		&:hover{
+			color: @white;
+			background-color: lighten(@rojo, 20);
+		}
 	}
 	&.btn-participa{
-		background-color: #1f8cd0 !important;
+		background-color:@rojo;
+		&:hover{
+			color: @white;
+			background-color:lighten(@rojo, 20%);
+		}
 	}
 }
+
+
 
 .navbar{
 	.cabecera,
@@ -44,6 +48,11 @@ html{
 		text-transform: uppercase;
 		letter-spacing: .5ex;
 	}
+	.navbar-brand{
+		height: 80px;	
+		&:hover{
+			border-bottom: 3px solid @white;
+		}	}
 }
 
 
@@ -53,10 +62,11 @@ html{
   	font-size: @font-size-large;
   	line-height: @line-height-computed;
   	height: @navbar-height;
+  	
 }
 
 .navbar-brand{
-	padding: 18.33px 30px;
+	padding: 18.33px 5px;
 	img{
 		max-width: 50px;
 	}
@@ -64,17 +74,17 @@ html{
 
 
 .entry-header{
-
+	margin-top:@padding-small-vertical*18;
 	aside{
 		color: @gray-light;
 		ul{
 			margin: @line-height-computed*.75 0;
-			padding: 0;
+			margin:0;
 			font-size: 12px;
 			li{
 				display: inline;
 				margin-left: 20px;
-				&:first-child{margin-left: 0}
+				&:first-child{margin-left: 0px}
 			}
 		}
 	}
@@ -95,35 +105,65 @@ html{
 
 .encabezado{
 	font-weight: 400;
-	margin-bottom: 18px;
+	margin-bottom: 50px;
 	padding-left: 15px;
-	margin-top: 20px;
+	margin-top: @padding-small-vertical*18;
+
+	h3{
+		font-size: 42px;
+		font-weight: 100;
+	}
 }
 
 .push-footer{
 	margin-bottom: @footer-height;
 }
 
+#mce_50{
+	display: none;
+}
+
+
 /*--------------- Footer */
 
 
 footer{
+	.clearfix;
 	position: relative;
 	bottom: 0;
-	background-color: @semi-black;
-	height: @footer-height;
-	color: #FFFFFF;
+	background-color: @black;
+	height: @footer-height/1.5;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
 	font-size: 12px;
 	.container{
 		bottom: 50px;
-	}
+		.redsocial{
+			margin-top: 30px;
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 25px;
+				height: 25px;
+				text-align: right;
+				padding: 0 5 0 5;
+
+				
+			}
+			
+					
+				}
+				
+			}
+			
+		}
+
 
 	#menu-menu-de-pie-de-pagina{
 		text-align: left;
-		margin-top: 50px;
+		margin:25px;
 		&.nav > li > a{
 			padding: 6px 12px !important;
 		}
@@ -131,16 +171,13 @@ footer{
 }
 
 .row{
-	margin-top: 60px;
+	margin-top: @margen-superior-fila;
 }
 
-footer img{
-	width: 25px;
-	height: 25px;
-}
+
 
 .margin-top-fix{
-	margin-top: 87px !important;
+	margin-top: 87px;
 }
 
 .alinearderecha{
@@ -159,20 +196,12 @@ footer img{
 	text-decoration:none;
 }
 
-
-.col-md-6 a:hover{
-	color:@naranjo;
-}
-
 .background-croquis{
 	background-image: url("@{img-path}croquis6.png");
 	background-repeat: no-repeat;
 	background-position: center left;
-	background-color: #FDFDFD;
-	
+	background-color: #FDFDFD;	
 }
-
-
 
 /* WP User Front End */
 
@@ -188,25 +217,240 @@ footer img{
 		.btn;
 		.btn-primary;
 		float: right;
+		box-shadow: none!important;
+		margin-bottom: @padding-small-vertical*18;
 	}
 }
+
+/* Registration Plugin  */
+
+#wppb_register{
+	label{
+		text-align: right;
+	}
+	.registerNameHeading{
+		font-size: 22px;
+		font-family: @font-family-serif;
+		font-weight: 300;
+		margin: 20px 0;
+		color: @rojo;
+		padding-top:@jumbotron-padding;
+	}
+	.registerContactInfoHeading{
+		font-size: 22px;
+		font-family: @font-family-serif;
+		font-weight: 300;
+		margin: 20px 0;
+		color: @rojo;
+		padding-top:@jumbotron-padding;
+	}
+	.registerAboutYourselfHeader{
+		font-size: 22px;
+		font-family: @font-family-serif;
+		font-weight: 300;
+		margin: 20px 0;
+		color: @rojo;
+		padding-top: @jumbotron-padding;
+	}
+}
+
+#user-name,#password,#email,#first_name,#last_name,#website,#description,#pass1,#pass2,#new-post-title,#new-post-tags{
+		border-radius: 4px;
+		border: 1px solid #cccccc;
+		padding: 6px 12px
+}
+//Esto es el botón de de añadir usuario.
+#addusersub,#updateuser,.btn-success,.button {
+	-moz-user-selection:none;
+	float: right;
+	color:white;
+	background-color:@rojo;
+	background-image: none;
+	border-radius: 4px;
+	border: 1px solid #A1151F;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857;
+	margin-bottom:50px;
+	margin-top:20px;
+	padding: 6px 12px;
+	text-align:center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.button:hover{
+	background-color: lighten(@rojo, 10%);
+	color:white;
+	border:1px solid lighten(@rojo, 10%)
+}
+
+#addusersub:hover{
+	background-color: lighten(@rojo, 10%)
+}
+
+.btn-success:hover,.btn-succes:focus{
+	background-color: lighten(@rojo, 10%);
+	color:white;
+	border:1px solid lighten(@rojo, 10%)
+}
+
+
+/*-------- Paginación */
+
+.pagination-custom{
+	text-align: right;
+	.wp-pagenavi{
+			margin-bottom: 80px;
+			
+		span,
+		a{
+			padding: 5px 10px;
+			margin-top: 10;
+			margin-left: 0px;
+			margin-right: 0px;
+			border-top: 1px solid fade(@black, 20);
+			border-bottom: 1px solid fade(@black, 20);
+			border-left: 1px solid fade(@black, 20);
+			&:last-child{
+				border-right: 1px solid fade(@black, 20);
+				border-radius: 0 6px 6px 0;
+
+			}
+			&:first-child{
+				border-radius: 6px 0 0 6px;
+			}
+			&:hover{
+				text-decoration: none;
+				background-color: @rojo;
+				color: @blanco;
+				border-bottom: 1px solid fade(@black, 20);
+				border-top:1px solid fade(@black, 20);
+				border-left:1px solid fade(@black, 20);
+				border-right:1px solid fade(@black, 20);
+
+			}
+			&.current{
+				border-bottom: 3px solid @rojo;
+				border-top:1px solid fade(@black, 20);
+				border-left:1px solid fade(@black, 20);
+				border-right:1px solid fade(@black, 20);
+
+			}
+		}
+
+		a{
+			color: @rojo;
+		}
+	}
+}
+
+
+
+//esto es footer max widht
+
+footer ul li a:hover{
+	text-decoration: none;
+	color:lighten(@rojo, 10%);
+	background-color:black;
+}
+
+footer .nav li a:hover,.nav li a:focus{
+	background-color:black;
+}
+
+footer  li.active{
+	background-color:black!important;
+}
+//PLUGIN FACE AND TWITT
+.main_social{
+		.facebook_left{
+				border-color:@rojo;
+				height: 320px!important;
+				top:50%;
+				iframe{
+					height: 320px!important;
+				}
+			.c_facebook{
+				background: @rojo;
+			._4s7c{
+				border-left: none;			
+		}
+		}
+		}
+}
+
+.main_social{
+
+		.twitter_left{
+				border-color:lighten(@rojo, 20%);
+				height: 260px;	
+					.connect_top{
+						background: @white;
+					}
+			.full_widget{
+				border:1px solid lighten(@rojo, 10%);
+			}
+			.c_twitter{
+				background: lighten(@rojo, 20%);
+			}
+			footer{
+				display: none;
+			}
+		}
+			.hidebar{
+				background:lighten(@rojo, 20%);
+				height: 35px;
+		}
+}
+	
 
 //NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
 @media (max-width: @screen-xs){
-	.margin-top-fix{margin-top: 100px;}
+	.margin-top-fix{
+		margin-top: 70px;
+	}
 	.logo{
 	margin-left: auto;
 	}
+	.navbar-brand{
+	padding: 18.33px 5px;
+	margin-left: 20px;
+	img{
+		max-width: 50px;
+	}
+	}
+	
 
 	footer{
+
 		text-align: center;
 		background-color: #353535;
 		height: 200px;
-		margin-top: 100px;
+		margin-top: 40px;
 		color: #FFFFFF;
 		bottom: 0;
 		font-size: 10px;
+		line-height: 2px;
+		.redsocial{
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 30px;
+				height: 30px;
+				text-align: left;
+				
+			}
+			
+					
+				}
+				
+			}
+	
+
 	}
 
 	.jumbotron .container{
@@ -224,6 +468,20 @@ footer img{
 		left: 2%;
 	    width: 95%;
 	}
+
+	.pagination-custom{
+	text-align: center;
+	.wp-pagenavi{
+			margin-bottom: 8px;
+		}
+	}
+
+	.main_social{
+		display: none;
+	}
+	.sidebar-derecha{
+		display: none;
+	}
 }
 
 //TELÉFONO HORIZONTAL
@@ -233,15 +491,37 @@ footer img{
 	.logo{
 	margin-left: auto;
 	}
-
+	.navbar-brand{
+	padding: 18.33px 5px;
+	margin-left: 20px;
+	img{
+		max-width: 50px;
+	}
+    }
 	footer{
 	text-align: center;
-	background-color: #353535;
+	background-color: black;
 	height: 200px;
-	margin-top: 200px;
+	margin-top: 50px;
 	color: #FFFFFF;
 	bottom: 0;
 	font-size: 10px;
+	.redsocial{
+			
+			.widget-footer{
+				list-style: none;
+				
+				.alignnone {
+				width: 30px;
+				height: 30px;
+				text-align: right;
+				
+			}
+			
+					
+				}
+				
+			}
 	}
 
 	.jumbotron .container{
@@ -250,11 +530,129 @@ footer img{
 		padding-top: 90px;
 
 	}
-
-	.navbar-brand{
-	padding: 10px 30px;
-
+	.main_social{
+		display: none;
+		top:50%;
+	}
+	.sidebar-derecha{
+		display: none;
+	}
 }
+
+
+/* Archive post */
+
+.caption{
+	padding: 2px 5px;
+
+	h5{
+		margin-bottom: 0;
+		line-height: @line-height-base;
+	
+	}
+
+	aside{
+		margin: 5px 0;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: @gray;
+		
+	}
+
+	&:hover{
+		background-color: @gray-lighter;
+		a{text-decoration: none !important;}
+	}
+}
+.captiondos{
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: @padding-small-vertical*18;
 }
 
+.thumbnail-dos{
+
+  display: block;
+  padding: @thumbnail-padding;
+  margin-bottom: @line-height-computed;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border:;
+  border-radius: @thumbnail-border-radius;
+}
+
+
+.thumbnail-relatos{
+	height: 150px;
+	 margin-bottom: @line-height-computed *4.5;
+	 a:hover {
+    text-decoration: none !important;
+  }
+	 
+}
+
+.alignnone{
+	margin-bottom: 20px;
+}
+
+
+.sidebar-derecha{
+	height: 550px;
+	margin: 0 2px;
+	padding: 5px;
+	background-color:lighten(@gray, 60%);
+		h4, 
+		.h4 {
+		margin: 0 25px;
+	}
+	ul > .widget-derecha{
+		list-style-type: none;
+		
+	}
+	ul > li >.wti-most-liked-posts{
+		line-height: 40px;
+		margin: 0 25px;
+		list-style-type: none;
+			a{ 
+				color: @text-color;
+				&:hover{
+				text-decoration: none !important;
+				color: @rojo;
+				}
+			}
+		
+	}
+}
+//ESTA ES LA FICHA DE PRENSA//
+
+
+ul.ficha-prensa{
+	margin-top: @padding-small-vertical*18;	
+	background-color: #eee;
+    padding: 20px;
+    font-size:@font-size-h6;
+    font-family: @font-family-sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
+    line-height: 200%;
+
+	li{
+		list-style-type: none;
+		.label{
+			display: inline-block;
+			width: 90px;
+			text-align: right;
+			max-height: 5px;
+			font-weight: bolder;
+			color: @rojo;
+			font-size:11px;
+			
+     	}
+
+	}        	
+}
+
+
+
+//Fin de CASCADA//
 

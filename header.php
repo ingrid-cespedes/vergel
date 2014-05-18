@@ -9,6 +9,9 @@
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), esc_html( get_bloginfo('name'), 1 ) ) ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
+	
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicon.icon" type="image/x-icon"/>
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicon.png" type="image/png"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
@@ -16,6 +19,17 @@
 </head>
 
 <body class="<?php sandbox_body_class() ?>">
+
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-51061031-1', 'vergel439.cl');
+		ga('send', 'pageview');
+	</script>
+
 	<header>
 	  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
@@ -55,7 +69,7 @@
 			
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $current_user->user_login; ?><b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $current_user->display_name; ?><b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<?php echo '<li><a href="'.esc_url( get_permalink( get_page_by_title( __("Editar perfil", "vergel")))).'">Editar perfil</a></li>';	?>				
 								<?php echo '<li><a href="'.wp_logout_url( home_url() ).'">Salir</a></li>'; ?>
