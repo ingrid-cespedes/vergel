@@ -37,7 +37,7 @@
 			                	<a href="<?php the_permalink() ?>">
 			                    <div class="caption">
 			                    	<h4><?php the_title(); ?></h4>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 15); echo '...' ?></p>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
@@ -58,7 +58,7 @@
 			                    <div class="caption">
 			                    	<h5><?php the_title(); ?></h5>
 			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 25); echo '...' ?></p>
+			                        <p><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
