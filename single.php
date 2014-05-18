@@ -58,7 +58,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <div class="encabezado"><h5>Deja tu comentario</h5></div>
+          <div class="encabezado-dos"><h5>Deja tu comentario</h5></div>
           <div class="form-group">
          	 <?php comments_template() ?>
          	 <!--  
