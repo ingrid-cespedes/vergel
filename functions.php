@@ -467,6 +467,17 @@ function sandbox_widgets_init() {
         
     ) );
 
+   register_sidebar( array(
+        'name' => __( 'Sidebar-derecha', '' ),
+        'id' => 'widget-derecha',
+        'class' => 'sidebar-derecha',
+        'description' => __( 'los más votados', '' ),
+        'before_widget' => '<ul id="widget-derecha"><li class="widget-derecha">',
+        'after_widget' => '</li></ul>',
+        'before_title' => '<h4>',
+        
+    ) );
+
 	if ( !function_exists('register_sidebars') )
 		return;
 
@@ -559,20 +570,4 @@ function string_limit_words($string, $word_limit) {
 /*------------------------------------------ Register Custom Navigation Walker */
 require_once('wp_bootstrap_navwalker.php');
 
-?>
-
-<?php
-function francoplugin_register_sidebars(){
-    register_sidebar(array(
-        "name" => "aledaño",
-        "id" => "aledaño",
-        "descripcion" => "sidebar derecho",
-        "class" => "aledañoderecho col-md-3",
-        "before_widget" => "<li id='%1$s' class='%2$s'>",
-        "after_widget" => "</li>",
-        "before_title" => "<h2 class='titulodelwidget'>",
-        "after_title" => "</h2>"
-    ));
-}
-add_action('widgets_init','francoplugin_register_sidebars');
 ?>

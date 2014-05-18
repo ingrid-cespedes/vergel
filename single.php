@@ -15,8 +15,21 @@
         </div>
         <p class="text-justify"><?php the_content(); ?></p>
       </div>
-    </div>
 
+      <div class="col-md-3">
+        <div class="entry-header">
+
+          <div class="sidebar-derecha">
+
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
+
+
+             <?php endif; ?>
+          
+        </div>
+      </div>
+    </div>
+</div>
 
 
       <div class="row">

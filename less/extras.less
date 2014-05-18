@@ -2,7 +2,6 @@
 html{
 	height: 100%;
 }
-
 .map-container{
 	.clearfix();
 	margin: 0;
@@ -85,17 +84,17 @@ html{
 
 
 .entry-header{
-
+	margin-top:@padding-small-vertical*18;
 	aside{
 		color: @gray-light;
 		ul{
 			margin: @line-height-computed*.75 0;
-			padding: 0;
+			margin:0;
 			font-size: 12px;
 			li{
 				display: inline;
 				margin-left: 20px;
-				&:first-child{margin-left: 0}
+				&:first-child{margin-left: 0px}
 			}
 		}
 	}
@@ -118,6 +117,7 @@ html{
 	font-weight: 400;
 	margin-bottom: 50px;
 	padding-left: 15px;
+	margin-top: @padding-small-vertical*18;
 
 	h3{
 		font-size: 42px;
@@ -228,6 +228,8 @@ footer{
 		.btn;
 		.btn-primary;
 		float: right;
+		box-shadow: none!important;
+		margin-bottom: @padding-small-vertical*18;
 	}
 }
 
@@ -488,6 +490,9 @@ footer  li.active{
 	.main_social{
 		display: none;
 	}
+	.sidebar-derecha{
+		display: none;
+	}
 }
 
 //TELÉFONO HORIZONTAL
@@ -540,6 +545,9 @@ footer  li.active{
 		display: none;
 		top:50%;
 	}
+	.sidebar-derecha{
+		display: none;
+	}
 }
 
 
@@ -570,8 +578,7 @@ footer  li.active{
 .captiondos{
 	padding-left: 10px;
 	padding-right: 10px;
-
-
+	margin-top: @padding-small-vertical*18;
 }
 
 .thumbnail-dos{
@@ -596,15 +603,42 @@ footer  li.active{
 }
 
 .alignnone{
-	
 	margin-bottom: 20px;
+}
 
+
+.sidebar-derecha{
+	height: 550px;
+	margin: 0 2px;
+	padding: 5px;
+	background-color:lighten(@gray, 60%);
+		h4, 
+		.h4 {
+		margin: 0 25px;
+	}
+	ul > .widget-derecha{
+		list-style-type: none;
+		
+	}
+	ul > li >.wti-most-liked-posts{
+		line-height: 40px;
+		margin: 0 25px;
+		list-style-type: none;
+			a{ 
+				color: @text-color;
+				&:hover{
+				text-decoration: none !important;
+				color: @rojo;
+				}
+			}
+		
+	}
 }
 //ESTA ES LA FICHA DE PRENSA//
 
 
 ul.ficha-prensa{
-		
+	margin-top: @padding-small-vertical*18;	
 	background-color: #eee;
     padding: 20px;
     font-size:@font-size-h6;
@@ -621,9 +655,9 @@ ul.ficha-prensa{
 			text-align: right;
 			max-height: 5px;
 			font-weight: bolder;
-			a{
-				color: @rojo;
-			}
+			color: @rojo;
+			font-size:11px;
+			
      	}
 
 	}        	
