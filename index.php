@@ -20,9 +20,6 @@
     </div>
 </div>
 
-
-
-
 <!-- Galería -->
 
     <div class="container">
