@@ -18,7 +18,7 @@
         <div class="col-lg-3">
 
                 <div class="thumbnail">
-                	<a href="<?php the_permalink() ?>">
+                	<a href="somewhere.html" "<?php the_permalink()?>" onmouseover="nhpup.popup('lorem ipsum');">
                 	<?php the_post_thumbnail('medium');?>
                     <div class="caption">
                     	<h5><?php the_title(); ?></h5>
