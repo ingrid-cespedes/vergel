@@ -4,8 +4,8 @@
   <div class="container margin-top-fix">
       
    
-<div class="encabezado">
-	<h3><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
+<div class="encabezado" >
+	<h3 data-popup="Font: Merriweather, Font Size: @font-size-base, Color: @rojo"><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
 </div>
 
 <div class="row">
@@ -21,9 +21,9 @@
                 	<a href="<?php the_permalink() ?>">
                 	<?php the_post_thumbnail('medium');?>
                     <div class="caption">
-                    	<h5><?php the_title(); ?></h5>
-						<aside><?php the_time ('l j F, Y'); ?></aside>
-                        <p><?php echo string_limit_words(get_the_excerpt(), 30); echo '...' ?></p>
+                    	<h5 data-popup="Font: Merriweather, Font Size: @font-size-base, Color: @rojo"><?php the_title(); ?></h5>
+						<aside data-popup="Font: Open Sans, Font-size: 12px, Color: @gray"><?php the_time ('l j F, Y'); ?></aside>
+                        <p data-popup="Font: Open Sans, Font-Size: @font-size-base, Color: @gray-dark"><?php echo string_limit_words(get_the_excerpt(), 30); echo '...' ?></p>
                     </div>
                     </a>
 				</div>

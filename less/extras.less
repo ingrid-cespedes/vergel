@@ -688,6 +688,31 @@ ul.ficha-prensa{
 	}        	
 }
 
+.caption h5:hover:after, aside:hover:after, p:hover:after{
+	content: attr(data-popup);
+	position: absolute;
+	top:2em;
+	padding: 0.3em;
+	margin-left: 1em;
+  	z-index:2;
+  	border:1px solid #0cf; 
+  	background-color:#555; 
+  	color:#fff;
+}
+
+.encabezado h3:hover:after{
+	content: attr(data-popup);
+	position: absolute;
+	top:2em;
+	padding: 0.3em;
+	margin-left: 1em;
+  	z-index:2;
+  	border:1px solid #0cf; 
+  	background-color:#555; 
+  	color:#fff;
+}
+
+
 
 //Fin de CASCADA//
 
