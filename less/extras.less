@@ -115,6 +115,9 @@ html{
 	}
 }
 
+.col-md-6{
+	margin-bottom:@padding-small-vertical*9; 
+
 .push-footer{
 	margin-bottom: @footer-height;
 }
@@ -345,7 +348,14 @@ footer{
 		}
 	}
 }
-
+.thumbnail-relatos{
+	height: 150px;
+	 margin-bottom:@line-height-computed *4.5;
+	 a:hover {
+    text-decoration: none !important;
+  }
+	 
+}
 
 
 //esto es footer max widht
@@ -425,10 +435,7 @@ footer  li.active{
 	
 
 	footer{
-
 		text-align: center;
-		background-color: #353535;
-		height: 200px;
 		margin-top: 40px;
 		color: #FFFFFF;
 		bottom: 0;
@@ -453,13 +460,13 @@ footer  li.active{
 
 	}
 
-	.jumbotron .container{
+	.jumbotron{ 
+		margin-bottom: @padding-small-vertical*7;
+		.container{
+			padding-top: 90px;
 
-		padding-bottom: 30px;
-		padding-top: 90px;
-
+		}
 	}
-
 	.navbar-brand{
 	padding: 10px 30px;
 
@@ -482,6 +489,17 @@ footer  li.active{
 	.sidebar-derecha{
 		display: none;
 	}
+	.encabezado{
+		margin-top:@padding-small-vertical*3; 
+		margin-bottom:@padding-small-vertical*0; 
+	}
+	.thumbnail-relatos{
+		margin-top: @padding-small-vertical*5;
+		margin-bottom:@padding-small-vertical*7; 
+		height:215px;
+	}
+
+
 }
 
 //TELÉFONO HORIZONTAL
@@ -501,7 +519,7 @@ footer  li.active{
 	footer{
 	text-align: center;
 	background-color: black;
-	height: 200px;
+	height: 240px;
 	margin-top: 50px;
 	color: #FFFFFF;
 	bottom: 0;
@@ -536,6 +554,12 @@ footer  li.active{
 	}
 	.sidebar-derecha{
 		display: none;
+	}
+	.encabezado{
+		margin-top:@padding-small-vertical*5; 
+	}
+	.thumbnail-relatos{
+		margin-bottom:@padding-small-vertical*3; 
 	}
 }
 
@@ -583,14 +607,7 @@ footer  li.active{
 }
 
 
-.thumbnail-relatos{
-	height: 150px;
-	 margin-bottom: @line-height-computed *4.5;
-	 a:hover {
-    text-decoration: none !important;
-  }
-	 
-}
+
 
 .alignnone{
 	margin-bottom: 20px;
@@ -598,10 +615,14 @@ footer  li.active{
 
 
 .sidebar-derecha{
-	height: 550px;
-	margin: 0 2px;
+
+	font-size:13px;
+	font-weight: 400;
+	height: auto;
+	margin: 5px 5px;
 	padding: 5px;
-	background-color:lighten(@gray, 60%);
+	background-color:lighten(@gray, 65%);
+
 		h4, 
 		.h4 {
 		margin: 0 25px;
@@ -611,9 +632,11 @@ footer  li.active{
 		
 	}
 	ul > li >.wti-most-liked-posts{
-		line-height: 40px;
-		margin: 0 25px;
+
+		line-height: 30px;
+		margin: 25px 25px;
 		list-style-type: none;
+		color: @rojo;
 			a{ 
 				color: @text-color;
 				&:hover{
@@ -622,6 +645,17 @@ footer  li.active{
 				}
 			}
 		
+	}
+	.tagcloud{
+		a{	
+			font-weight: 400;
+			color: @text-color;
+			&:hover{
+				text-decoration: none !important;
+				color: @rojo;
+
+				}
+		}
 	}
 }
 //ESTA ES LA FICHA DE PRENSA//
