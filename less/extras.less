@@ -616,8 +616,8 @@ footer  li.active{
 .sidebar-derecha{
 	font-size:13px;
 	font-weight: 400;
-	height: 450px;
-	margin: 0 2px;
+	height: auto;
+	margin: 5px 10px;
 	padding: 5px;
 	background-color:lighten(@gray, 65%);
 		h4, 
@@ -641,6 +641,15 @@ footer  li.active{
 				}
 			}
 		
+	}
+	.tagcloud{
+		a{
+			color: @text-color;
+			&:hover{
+				text-decoration: none !important;
+				color: @rojo;
+				}
+		}
 	}
 }
 //ESTA ES LA FICHA DE PRENSA//

@@ -33,13 +33,15 @@
 
 
       <div class="row">
+
+    
         <div class="encabezado"><h3>Más <?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3></div>
 			<?php
 			$category = get_the_category(); //Obtengo el ID de la categoría del post
 			$this_post = $post->ID;
-			$posts = get_posts('numberposts=4&orderby=rand&category=' . $category[0]->cat_ID . '&exclude=' . $this_post);
+			$posts = get_posts('numberposts=3&orderby=rand&category=' . $category[0]->cat_ID . '&exclude=' . $this_post);
 			foreach($posts as $post) { ?>
-	
+
 		        <div class="col-md-3">
 					
 		                <div class="thumbnail">
@@ -53,6 +55,7 @@
 	                </a>
 				</div>
 			<?php } wp_reset_postdata(); ?>
+      
 		</div>	
       <!-- fin segundo row -->
 
