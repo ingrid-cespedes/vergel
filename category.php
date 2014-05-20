@@ -5,7 +5,7 @@
       
    
 <div class="encabezado" >
-	<h3 data-popup="Font: Merriweather, Font Size: @font-size-base, Color: @rojo"><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
+	<h3 data-popup="Font: Merriweather, Font Size: @font-size-h3, Color: @rojo"><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
 </div>
 
 <div class="row">

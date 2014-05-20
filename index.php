@@ -25,7 +25,7 @@
     <div class="container">
 
     	 <div class="row">
-         <div class="encabezado"><h3>Últimas Ideas</h3></div>
+         <div class="encabezado"><h3 data-popup="Font: Merriweather, Font Size: @font-size-h3, Color: @rojo">Últimas Ideas</h3></div>
 			<?php query_posts('category_name=ideas&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
@@ -33,8 +33,8 @@
 			                <div class="thumbnail-relatos">
 			                	<a href="<?php the_permalink() ?>">
 			                    <div class="caption">
-			                    	<h4><?php the_title(); ?></h4>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
+			                    	<h4 data-popup="Font: Merriweather, Font Size: @font-size-h4, Color: @rojo"><?php the_title(); ?></h4>
+			                        <p data-popup="Font: Open Sans, Font-Size: @font-size-base, Color: @gray-dark"><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
@@ -44,7 +44,7 @@
 
 
     	 <div class="row">
-          <div class="encabezado"><h3>Últimos Relatos</h3></div>
+          <div class="encabezado"><h3 data-popup="Font: Merriweather, Font Size: @font-size-h3, Color: @rojo">Últimos Relatos</h3></div>
 			<?php query_posts('category_name=relatos&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
 			        <div class="col-md-3">
@@ -53,9 +53,9 @@
 			                	<a href="<?php the_permalink() ?>">
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="caption">
-			                    	<h5><?php the_title(); ?></h5>
-			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
+			                    	<h5 data-popup="Font: Merriweather, Font Size: @font-size-base, Color: @rojo"><?php the_title(); ?></h5>
+			                    	<aside data-popup="Font: Open Sans, Font-size: 12px, Color: @gray"><?php the_time ('l j F, Y'); ?></aside>
+			                        <p data-popup="Font: Open Sans, Font-Size: @font-size-base, Color: @gray-dark"><?php echo string_limit_words(get_the_excerpt(), 45); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>
@@ -66,17 +66,17 @@
       
       <!-- fin primer row -->
       <div class="row">
-        <div class="encabezado"><h3>Prensa Relacionada</h3></div>
+        <div class="encabezado"><h3 data-popup="Font: Merriweather, Font Size: @font-size-h3, Color: @rojo">Prensa Relacionada</h3></div>
 			<?php query_posts('category_name=prensa&showposts=4'); ?>
 				<?php while (have_posts()) : the_post(); ?>
-			        <div class="col-md-3">
+			        <div class="col-md-3" data-popup="Width: Col-md-3, Hover: @thumbnail-bg">
 			                <div class="thumbnail">
 			                	<a href="<?php the_permalink() ?>">
 			                	<?php the_post_thumbnail('small');?>
 			                    <div class="caption">
-			                    	<h5><?php the_title(); ?></h5>
-			                    	<aside><?php the_time ('l j F, Y'); ?></aside>
-			                        <p><?php echo string_limit_words(get_the_excerpt(), 20); echo '...' ?></p>
+			                    	<h5 data-popup="Font: Merriweather, Font Size: @font-size-base, Color: @rojo"><?php the_title(); ?></h5>
+			                    	<aside data-popup="Font: Open Sans, Font-size: 12px, Color: @gray"><?php the_time ('l j F, Y'); ?></aside>
+			                        <p data-popup="Font: Open Sans, Font-Size: @font-size-base, Color: @gray-dark"><?php echo string_limit_words(get_the_excerpt(), 20); echo '...' ?></p>
 			                    </div>
 							</div>
 		                </a>

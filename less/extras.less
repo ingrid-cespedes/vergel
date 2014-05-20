@@ -688,15 +688,17 @@ ul.ficha-prensa{
 	}        	
 }
 
-.caption h5:hover:after, aside:hover:after, p:hover:after{
+.caption h5:hover:after, h4:hover:after, aside:hover:after, p:hover:after{
+	width: @padding-small-vertical*38;
+	font-size: @font-size-base;
 	content: attr(data-popup);
 	position: absolute;
 	top:2em;
 	padding: 0.3em;
 	margin-left: 1em;
   	z-index:2;
-  	border:1px solid #0cf; 
-  	background-color:#555; 
+  	border-radius: 3px;
+  	background-color:@gray; 
   	color:#fff;
 }
 
@@ -707,8 +709,8 @@ ul.ficha-prensa{
 	padding: 0.3em;
 	margin-left: 1em;
   	z-index:2;
-  	border:1px solid #0cf; 
-  	background-color:#555; 
+  	border-radius: 3px;
+  	background-color: @gray; 
   	color:#fff;
 }
 
