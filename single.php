@@ -3,7 +3,7 @@
 <div class="container">
     <div class="margin-top-fix"></div>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9">
         <div class="entry-header">
           <h2><?php the_title(); ?></h2>
           <aside>
@@ -42,7 +42,7 @@
 			$posts = get_posts('numberposts=3&orderby=rand&category=' . $category[0]->cat_ID . '&exclude=' . $this_post);
 			foreach($posts as $post) { ?>
 
-		        <div class="col-md-4">
+		        <div class="col-md-3">
 					
 		                <div class="thumbnail">
                       <a href="<?php the_permalink() ?>">
@@ -60,7 +60,7 @@
       <!-- fin segundo row -->
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="encabezado-dos"><h5>Deja tu comentario</h5></div>
           <div class="form-group">
          	 <?php comments_template() ?>
