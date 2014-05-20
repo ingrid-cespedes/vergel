@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="entry-header">
-          <h2><?php the_title(); ?></h2>
+          <h3><?php the_title(); ?></h3>
           <aside>
             <ul>
               <li><?php the_time ('l j \d\e\ F, Y'); ?></li>
