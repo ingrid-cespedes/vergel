@@ -19,6 +19,7 @@
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
+
   }
 }
 
@@ -32,8 +33,10 @@
   &:extend(.clearfix all);
 
 
+
   @media (min-width: @grid-float-breakpoint) {
     float: left;
+
   }
 }
 
@@ -66,11 +69,13 @@
     border-top: 0;
     box-shadow: none;
 
+
     &.collapse {
       display: block !important;
       height: auto !important;
       padding-bottom: 0; // Override default setting
       overflow: visible !important;
+
     }
 
     &.in {
@@ -95,6 +100,7 @@
 
     @media (max-width: @screen-xs-min) and (orientation: landscape) {
       max-height: 200px;
+      height:35px;
     }
   }
 }
@@ -110,6 +116,7 @@
   > .navbar-collapse {
     margin-right: -@navbar-padding-horizontal;
     margin-left:  -@navbar-padding-horizontal;
+   
 
     @media (min-width: @grid-float-breakpoint) {
       margin-right: 0;
