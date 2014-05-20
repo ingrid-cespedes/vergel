@@ -71,7 +71,9 @@ html{
 		max-width: 50px;
 	}
 }
-
+.entry-header h2{
+	font-size: 30px!important;
+}
 
 .entry-header{
 	margin-top:@padding-small-vertical*18;
@@ -365,6 +367,36 @@ footer{
   }
 	 
 }
+
+//ESTA ES LA FICHA DE PRENSA//
+
+
+ul.ficha-prensa{
+	margin-top: @padding-small-vertical*18;	
+	background-color: #eee;
+    padding: 20px;
+    font-size:@font-size-h6;
+    font-family: @font-family-sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
+    line-height: 200%;
+
+	li{
+		list-style-type: none;
+		.label{
+			display: inline-block;
+			width: 90px;
+			text-align: right;
+			max-height: 5px;
+			font-weight: bolder;
+			color: @rojo;
+			font-size:11px;
+			
+     	}
+
+	}        	
+}
+
 
 
 //esto es footer max widht
@@ -690,37 +722,5 @@ footer  li.active{
 	}
 	
 }
-
-//ESTA ES LA FICHA DE PRENSA//
-
-
-ul.ficha-prensa{
-	margin-top: @padding-small-vertical*18;	
-	background-color: #eee;
-    padding: 20px;
-    font-size:@font-size-h6;
-    font-family: @font-family-sans-serif;
-    border-radius: 4px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
-    line-height: 200%;
-
-	li{
-		list-style-type: none;
-		.label{
-			display: inline-block;
-			width: 90px;
-			text-align: right;
-			max-height: 5px;
-			font-weight: bolder;
-			color: @rojo;
-			font-size:11px;
-			
-     	}
-
-	}        	
-}
-
-
-
 //Fin de CASCADA//
 
