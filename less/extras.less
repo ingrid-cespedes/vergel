@@ -235,11 +235,11 @@ footer{
 
 /* Registration Plugin  */
 
-#wppb_register{
+#wppb_register, #wppb_login, {
 	label{
 		text-align: right;
 	}
-	.registerNameHeading{
+	.registerNameHeading, .registerContactInfoHeading, .registerAboutYourselfHeader,{
 		font-size: 22px;
 		font-family: @font-family-serif;
 		font-weight: 300;
@@ -247,22 +247,10 @@ footer{
 		color: @rojo;
 		padding-top:@jumbotron-padding;
 	}
-	.registerContactInfoHeading{
-		font-size: 22px;
-		font-family: @font-family-serif;
-		font-weight: 300;
-		margin: 20px 0;
-		color: @rojo;
-		padding-top:@jumbotron-padding;
-	}
-	.registerAboutYourselfHeader{
-		font-size: 22px;
-		font-family: @font-family-serif;
-		font-weight: 300;
-		margin: 20px 0;
-		color: @rojo;
-		padding-top: @jumbotron-padding;
-	}
+}
+
+input #remember-me{
+	margin-left: 50px;
 }
 
 #user-name,#password,#email,#first_name,#last_name,#website,#description,#pass1,#pass2,#new-post-title,#new-post-tags{
