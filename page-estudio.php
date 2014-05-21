@@ -33,33 +33,38 @@ Template Name: Página de estudios
 				</div>
 			</div>
 		</div><!-- .row -->
+		
 		<div class="row">
         <div class="encabezado"><h3>Más <?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3></div>
 			<?php
-		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
-		  while ($wp_query->have_posts()) : $wp_query->the_post();
-		?>
-        <div class="col-lg-3">
+			$category = get_the_category(); //Obtengo el ID de la categoría del post
+			$this_post = $post->ID;
+			$posts = get_posts('numberposts=3&orderby=rand&category=' . $category[0]->cat_ID . '&exclude=' . $this_post);
+			foreach($posts as $post) { ?>
 
-                <div class="thumbnail">
-                	<a href="<?php the_permalink() ?>">
-                	<?php the_post_thumbnail('medium');?>
-                    <div class="caption">
-                    	<h5><?php the_title(); ?></h5>
-						<aside><?php the_time ('l j F, Y'); ?></aside>
-                        <p><?php echo string_limit_words(get_the_excerpt(), 30); echo '...' ?></p>
-                    </div>
-                    </a>
+		        <div class="col-md-3">
+					
+		                <div class="thumbnail">
+                      <a href="<?php the_permalink() ?>">
+		                	<?php the_post_thumbnail('medium');?>
+		                    <div class="caption">
+		                    	<h5><?php the_title(); ?></h5>
+		                        <p><?php echo string_limit_words(get_the_excerpt(), 20); echo '...' ?></p>
+		                    </div>
+						</div>
+	                </a>
 				</div>
-           
-		</div>
-	    <?php endwhile; wp_reset_postdata(); ?>
+			<?php } wp_reset_postdata(); ?>
+      
+		</div>	<!-- .row -->
 
-		</div>
 
-		 <!--Inicio de codigo de pagination-->
-    <div class='pagination-custom'>
+    </div> <!-- container -->
+
+
+
+<?php get_footer() ?>
+on-custom'>
 	    <?php wp_pagenavi(); //Posts por páginas ?>
     </div>
 
