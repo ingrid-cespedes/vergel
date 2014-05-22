@@ -9,8 +9,9 @@
 </div>
 
 <div class="row">
+	<div class="col-lg-10">
 	<?php echo category_description( get_category_by_slug('category-Estudios Arquitectónicos')->term_id ); ?>
-   
+   </div>
 		<?php
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
