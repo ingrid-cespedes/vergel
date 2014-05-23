@@ -5,8 +5,11 @@
 	<title>Vergel 439</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="http://vergel439.cl/wp-content/themes/vergel/style.css" />
+	<link rel="stylesheet" type="text/css" href="http://vergel439.cl/wp-content/themes/vergel/vergel.css" />
+
 <link rel='stylesheet' id='pure_slide_social_tab_css-css'  href='http://vergel439.cl/wp-content/plugins/puretheme-slide-social-tabs/css/plugins-main.css?ver=3.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='http://vergel439.cl/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.8' type='text/css' media='all' />
+
 <link rel='stylesheet' id='wpuf-css'  href='http://vergel439.cl/wp-content/plugins/wp-user-frontend/css/wpuf.css?ver=3.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='wppb_stylesheet-css'  href='http://vergel439.cl/wp-content/plugins/profile-builder/assets/css/front.end.css?ver=3.9.1' type='text/css' media='all' />
 <link rel='stylesheet' id='really_simple_share_style-css'  href='http://vergel439.cl/wp-content/plugins/really-simple-facebook-twitter-share-buttons/style.css?ver=3.9.1' type='text/css' media='all' />
@@ -142,7 +145,14 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 <div class="jumbotron margin-top-fix">
     <div class="container">
 
-        <h1>Concurso de ideas y relatos</h1>
+<!--esto va fuera es el link-->
+
+    
+<div id="bar">Font h1</div><!--esto va en el pop up-->
+    
+    
+        
+<a href="http://bar.com" data-tooltip="#bar"><h1>Concurso de ideas y relatos</h1></a>
         <p>Ideas para convertir las ruinas de Vergel 439 en un espacio socio-cultural</p>
         <p>Lee las <a href="concurso.html">bases aquí</a> </p>
 
@@ -159,7 +169,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 
     	 <div class="row">
          <div class="encabezado"><h3>Últimas Ideas</h3></div>
-										        <div class="col-md-3">
+						<div class="col-md-3">
 						
 			                <div class="thumbnail-relatos">
 			                	<a href="ideas.html">
@@ -283,7 +293,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
       <!-- fin primer row -->
       <div class="row">
         <div class="encabezado"><h3>Prensa Relacionada</h3></div>
-										        <div class="col-md-3">
+						<div class="col-md-3">
 			                <div class="thumbnail">
 			                	<a href="prensa-nacional.html">
 			                	<img width="300" height="224" src="http://vergel439.cl/wp-content/uploads/2014/05/Casa-Minga-Valpo-Cerro-Merced-300x224.jpg" class="attachment-small wp-post-image" alt="Casa-Minga-Valpo-Cerro-Merced-300x224" /><div class="caption">
@@ -418,5 +428,15 @@ var _wpcf7 = {"loaderUrl":"http:\/\/vergel439.cl\/wp-content\/plugins\/contact-f
 </script>
 <script type='text/javascript' src='http://vergel439.cl/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.8'></script>
 
+		<script type='text/javascript'>
+		$("a").hover(function(e) {
+		    $($(this).data("tooltip")).css({
+		        left: e.pageX + 1,
+		        top: e.pageY + 1
+		    }).stop().show(100);
+		}, function() {
+		    $($(this).data("tooltip")).hide();
+		});
+		</script>
 </body>
 </html>
