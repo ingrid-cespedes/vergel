@@ -718,8 +718,20 @@ footer  li.active{
 //Inicio de popup//
 
 #bar{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
+    position: absolute;
+    display: none;
+    background: fadeout(@gray, 10%);
+    font-size: 16px;
+    color: white;
+    padding:10px 10px;
+    box-shadow:2px 2px 4px 2px black inset;
+}
+
+#menu{
+    width:100px;
+    height:100px;
     position: absolute;
     display: none;
     background: pink;
@@ -727,6 +739,20 @@ footer  li.active{
     font-family:sans-serif;
     padding:10px 10px;
     box-shadow:5px 5px 4px 5px black inset;
+}
+
+
+#ideas{
+    width:200px;
+    height:auto;
+    position: absolute;
+    display: none;
+    background: fadeout(@gray, 5%);
+    font-size: 16px;
+    color: white;
+    padding:10px 10px;
+    border-radius: 5px;
+    z-index: 2;
 }
 
 
