@@ -9,15 +9,23 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-10">
+	<div class="col-md-9">
 	<?php echo category_description( get_category_by_slug('category-Estudios Geográficos')->term_id ); ?>
+   		<div class="sidebar-derecha">
+
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
+
+
+             <?php endif; ?>
+          
+        </div>
    </div>
 		<?php
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
 		?>
-        <div class="col-lg-3">
+        <div class="col-md-3">
 
                 <div class="thumbnail">
                 	<a href="<?php the_permalink() ?>">

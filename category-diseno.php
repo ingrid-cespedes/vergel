@@ -9,8 +9,16 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-10">
+	<div class="col-md-9">
 	<?php echo category_description( get_category_by_slug('category-Estudios de Diseño')->term_id ); ?>
+  		<div class="sidebar-derecha">
+
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
+
+
+             <?php endif; ?>
+          
+        </div>
    </div>
 		<?php
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;

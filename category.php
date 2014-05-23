@@ -15,7 +15,7 @@
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
 		  while ($wp_query->have_posts()) : $wp_query->the_post();
 		?>
-        <div class="col-lg-3">
+        <div class="col-md-3">
 
                 <div class="thumbnail">
                 	<a href="<?php the_permalink() ?>">
