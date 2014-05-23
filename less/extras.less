@@ -72,7 +72,6 @@ html{
 	}
 }
 
-
 .entry-header{
 	margin-top:@padding-small-vertical*18;
 	aside{
@@ -126,7 +125,16 @@ html{
 #mce_50{
 	display: none;
 }
+.col-md-9 p{
+	font-size: 16px;
+	line-height: 1.7;
+	padding: 0 50px;
+}
+.imagendeterminada{
+	border-radius: 800%;
+	margin: 40px 10px 40px 165px;
 
+}
 
 /*--------------- Footer */
 
@@ -141,6 +149,7 @@ footer{
 	width: 100%;
 	text-align: center;
 	font-size: 12px;
+	margin-top: 30px;
 	.container{
 		bottom: 50px;
 		.redsocial{
@@ -209,7 +218,6 @@ footer{
 
 /* WP User Front End */
 
-
 #wpuf-post-area{
 
 	margin-bottom: 100px;
@@ -228,35 +236,27 @@ footer{
 
 /* Registration Plugin  */
 
-#wppb_register{
+#wppb_register, #wppb_login, {
 	label{
 		text-align: right;
 	}
-	.registerNameHeading{
+	.registerNameHeading, .registerContactInfoHeading, .registerAboutYourselfHeader,{
 		font-size: 22px;
 		font-family: @font-family-serif;
 		font-weight: 300;
 		margin: 20px 0;
 		color: @rojo;
 		padding-top:@jumbotron-padding;
-	}
-	.registerContactInfoHeading{
-		font-size: 22px;
-		font-family: @font-family-serif;
-		font-weight: 300;
-		margin: 20px 0;
-		color: @rojo;
-		padding-top:@jumbotron-padding;
-	}
-	.registerAboutYourselfHeader{
-		font-size: 22px;
-		font-family: @font-family-serif;
-		font-weight: 300;
-		margin: 20px 0;
-		color: @rojo;
-		padding-top: @jumbotron-padding;
 	}
 }
+#wppb_login{
+
+	input[type="checkbox"]{
+		margin-left: 305px;
+	}
+} 
+	
+
 
 #user-name,#password,#email,#first_name,#last_name,#website,#description,#pass1,#pass2,#new-post-title,#new-post-tags{
 		border-radius: 4px;
@@ -306,12 +306,13 @@ footer{
 .pagination-custom{
 	text-align: right;
 	.wp-pagenavi{
+			margin-top: 30px;
 			margin-bottom: 80px;
 			
 		span,
 		a{
 			padding: 5px 10px;
-			margin-top: 10;
+			margin-top: 10px;
 			margin-left: 0px;
 			margin-right: 0px;
 			border-top: 1px solid fade(@black, 20);
@@ -357,6 +358,36 @@ footer{
   }
 	 
 }
+
+//ESTA ES LA FICHA DE PRENSA//
+
+
+ul.ficha-prensa{
+	margin-top: @padding-small-vertical*18;	
+	background-color: #eee;
+    padding: 20px;
+    font-size:@font-size-h6;
+    font-family: @font-family-sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
+    line-height: 200%;
+
+	li{
+		list-style-type: none;
+		.label{
+			display: inline-block;
+			width: 90px;
+			text-align: right;
+			max-height: 5px;
+			font-weight: bolder;
+			color: @rojo;
+			font-size:11px;
+			
+     	}
+
+	}        	
+}
+
 
 
 //esto es footer max widht
@@ -414,93 +445,6 @@ footer  li.active{
 				background:lighten(@rojo, 20%);
 				height: 35px;
 		}
-}
-	
-
-//NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
-
-@media (max-width: @screen-xs){
-	.margin-top-fix{
-		margin-top: 70px;
-	}
-	.logo{
-	margin-left: auto;
-	}
-	.navbar-brand{
-	padding: 18.33px 5px;
-	margin-left: 20px;
-	img{
-		max-width: 50px;
-	}
-	}
-	
-
-	footer{
-		text-align: center;
-		margin-top: 40px;
-		color: #FFFFFF;
-		bottom: 0;
-		font-size: 10px;
-		line-height: 2px;
-		.redsocial{
-			.widget-footer{
-				list-style: none;
-				
-				.alignnone {
-				width: 30px;
-				height: 30px;
-				text-align: left;
-				
-			}
-			
-					
-				}
-				
-			}
-	
-
-	}
-
-	.jumbotron{ 
-		margin-bottom: @padding-small-vertical*7;
-		.container{
-			padding-top: 90px;
-
-		}
-	}
-	.navbar-brand{
-	padding: 10px 30px;
-
-	}
-	#mapaFull{
-		left: 2%;
-	    width: 95%;
-	}
-
-	.pagination-custom{
-	text-align: center;
-	.wp-pagenavi{
-			margin-bottom: 8px;
-		}
-	}
-
-	.main_social{
-		display: none;
-	}
-	.sidebar-derecha{
-		display: none;
-	}
-	.encabezado{
-		margin-top:@padding-small-vertical*3; 
-		margin-bottom:@padding-small-vertical*0; 
-	}
-	.thumbnail-relatos{
-		margin-top: @padding-small-vertical*5;
-		margin-bottom:@padding-small-vertical*7; 
-		height:215px;
-	}
-
-
 }
 
 //TELÉFONO HORIZONTAL
@@ -562,9 +506,23 @@ footer  li.active{
 	.thumbnail-relatos{
 		margin-bottom:@padding-small-vertical*3; 
 	}
+	.imagendeterminada{
+		border-radius: 800%;
+		margin: 20px 250px;
+
+	}
+	
 }
 
 
+	.col-md-9 p{
+		font-size: 14;
+		line-height: 1.42857;
+		padding:0 0;
+	}
+	.entry-header h3{
+		line-height: @line-height-base*1.1;
+	}
 /* Archive post */
 
 .caption{
@@ -622,7 +580,9 @@ footer  li.active{
 	height: auto;
 	margin: 5px 5px;
 	padding: 5px;
-	background-color:lighten(@gray, 65%);
+
+	border-radius: 5px;
+	background-color: lighten(gray ,40%);
 
 		h4, 
 		.h4 {
@@ -659,62 +619,99 @@ footer  li.active{
 		}
 	}
 }
-//ESTA ES LA FICHA DE PRENSA//
 
+//NO PONER NADA AQUÍ QUE NO SEA DE ESTA RESOLUCIÓN
 
-ul.ficha-prensa{
-	margin-top: @padding-small-vertical*18;	
-	background-color: #eee;
-    padding: 20px;
-    font-size:@font-size-h6;
-    font-family: @font-family-sans-serif;
-    border-radius: 4px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .1) inset;
-    line-height: 200%;
+@media (max-width: @screen-xs){
+	.margin-top-fix{
+		margin-top: 70px;
+	}
+	.logo{
+	margin-left: auto;
+	}
+	.navbar-brand{
+	padding: 18.33px 5px;
+	margin-left: 20px;
+	img{
+		max-width: 50px;
+	}
+	}
+	
 
-	li{
-		list-style-type: none;
-		.label{
-			display: inline-block;
-			width: 90px;
-			text-align: right;
-			max-height: 5px;
-			font-weight: bolder;
-			color: @rojo;
-			font-size:11px;
+	footer{
+		text-align: center;
+		margin-top: 40px;
+		color: #FFFFFF;
+		bottom: 0;
+		font-size: 10px;
+		line-height: 2px;
+		.redsocial{
+			.widget-footer{
+				list-style: none;
 			
-     	}
+				.alignnone {
+				text-align: left;
+				
+			}
+			
+					
+				}
+				
+			}
+	
 
-	}        	
+	}
+
+	.jumbotron{ 
+		margin-bottom: @padding-small-vertical*7;
+		.container{
+			padding-top: 90px;
+
+		}
+	}
+	
+	#mapaFull{
+		left: 2%;
+	    width: 95%;
+	}
+
+	.pagination-custom{
+	text-align: center;
+	.wp-pagenavi{
+			margin-bottom: 8px;
+		}
+	}
+
+	.main_social{
+		display: none;
+	}
+	.sidebar-derecha{
+		display: none;
+	}
+	.encabezado{
+		margin-top:@padding-small-vertical*3; 
+		margin-bottom:@padding-small-vertical*0; 
+	}
+	.col-md-9 p{
+		font-size: 14;
+		line-height: 1.42857;
+		padding:0 0;
+		
+	}
+	.thumbnail-relatos{
+		margin-top: @padding-small-vertical*5;
+		margin-bottom:@padding-small-vertical*7; 
+		height:215px;
+	}
+	.imagendeterminada{
+		border-radius: 800%;
+        margin: 20px 20px;
+	}
+	.entry-header h3{
+		
+		line-height: @line-height-base*1.1;
+	}
+	
 }
-
-.caption h5:hover:after, h4:hover:after, aside:hover:after, p:hover:after{
-	width: @padding-small-vertical*38;
-	font-size: @font-size-base;
-	content: attr(data-popup);
-	position: absolute;
-	top:2em;
-	padding: 0.3em;
-	margin-left: 1em;
-  	z-index:2;
-  	border-radius: 3px;
-  	background-color:@gray; 
-  	color:#fff;
-}
-
-.encabezado h3:hover:after{
-	content: attr(data-popup);
-	position: absolute;
-	top:2em;
-	padding: 0.3em;
-	margin-left: 1em;
-  	z-index:2;
-  	border-radius: 3px;
-  	background-color: @gray; 
-  	color:#fff;
-}
-
-
-
 //Fin de CASCADA//
 

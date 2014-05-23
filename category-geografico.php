@@ -4,12 +4,26 @@
   <div class="container margin-top-fix">
       
    
-<div class="encabezado" >
-	<h3 data-popup="Font: Merriweather, Font Size: @font-size-h3, Color: @rojo"><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
+<div class="encabezado">
+	<h3><?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3>
 </div>
 
 <div class="row">
+	<div class="col-md-9">
+	<?php echo category_description( get_category_by_slug('category-Estudios Geográficos')->term_id ); ?>
+   	
+   </div>
+   <div class="col-md-3">
+   		<div class="sidebar-derecha">
 
+            <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar-derecha')) : ?>
+
+
+             <?php endif; ?>
+          
+        </div>
+    </div>
+ </div>
 		<?php
 		  $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 		  $wp_query = new WP_Query(array('cat' => $current_cat_id, 'paged' => $paged));
@@ -23,7 +37,7 @@
                     <div class="caption">
                     	<h5><?php the_title(); ?></h5>
 						<aside><?php the_time ('l j F, Y'); ?></aside>
-                        <p><?php echo string_limit_words(get_the_excerpt(), 25); echo '...' ?></p>
+                        <p><?php echo string_limit_words(get_the_excerpt(), 30); echo '...' ?></p>
                     </div>
                     </a>
 				</div>

@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="entry-header">
-          <h2><?php the_title(); ?></h2>
+          <h3><?php the_title(); ?></h3>
           <aside>
             <ul>
               <li><?php the_time ('l j \d\e\ F, Y'); ?></li>
@@ -31,10 +31,25 @@
     </div>
 </div>
 
+  <div class="row">
+        <div class="col-md-6">
+          <div class="encabezado-dos"><h5>Deja tu comentario</h5></div>
+          <div class="form-group">
+           <?php comments_template() ?>
+           <!--  
+                <textarea class="form-control" rows="3"></textarea>
+             -->   
+          </div>
+           <!--  
+              <button type="submit" class="btn btn-default">Comenta</button>
+             -->         
+        </div>
+        
+
+
+      </div>
 
       <div class="row">
-
-    
         <div class="encabezado"><h3>Más <?php $current_cat_id = the_category_ID(false); echo get_cat_name($current_cat_id);?></h3></div>
 			<?php
 			$category = get_the_category(); //Obtengo el ID de la categoría del post
@@ -59,23 +74,7 @@
 		</div>	
       <!-- fin segundo row -->
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="encabezado-dos"><h5>Deja tu comentario</h5></div>
-          <div class="form-group">
-         	 <?php comments_template() ?>
-         	 <!--  
-                <textarea class="form-control" rows="3"></textarea>
-             -->   
-          </div>
-         	 <!--  
-              <button type="submit" class="btn btn-default">Comenta</button>
-             -->         
-        </div>
-        
-
-
-      </div>
+    
 
 
   </div> <!--cierre de container-->

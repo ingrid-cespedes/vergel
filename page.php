@@ -15,6 +15,11 @@ Template Name: Página base
                 	<div class="captiondos">		
 						<h1><?php the_title() ?></h1>
 						<?php the_content() ?>
+
+
+
+					</div>
+
 					</div>
 				</div>
 			</div>
