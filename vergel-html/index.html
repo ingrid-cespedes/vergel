@@ -152,7 +152,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 
     
 <div id="bar">Font h1</div><!--esto va en el pop up-->
-	<a href="http://bar.com" data-tooltip="#bar"><h1>Concurso de ideas y relatos</h1></a>
+	<a data-tooltip="#bar"><h1>Concurso de ideas y relatos</h1></a>
         <p>Ideas para convertir las ruinas de Vergel 439 en un espacio socio-cultural</p>
         <p>Lee las <a href="concurso.html">bases aquí</a> </p>
 
@@ -168,16 +168,22 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
     <div class="container">
 
     	 <div class="row">
-  <div id="ideas">Encabezado font size h3, </div><!--esto va en el pop up-->     
-	<a href="http://bar.com" data-tooltip="#ideas">
-         <div class="encabezado"><h3>Últimas Ideas</h3></div></a>
+  <div class="titulo">Encabezado de los post
+  	font-family Merriweather, @font-size-h3, Color @rojo </div>
+  	<!--esto va en el pop up-->     
+         <div class="encabezado"><a data-tooltip=".titulo"><h3>Últimas Ideas</h3></div></a>
 						<div class="col-md-3">
 						
 			                <div class="thumbnail-relatos">
 			                	<a href="ideas.html">
 			                    <div class="caption">
-			                    	<h4>Caja de los sueños</h4>
-			                        <p>En este escenario, creo que el motor de cambio se encuentra en la revitalización de los sueños infantiles, es decir, en entregar la posibilidad de abrir un centro dedicado al desarrollo de ideas infantiles donde se puedan llevar a cabo actividades de carácter lúdico con...</p>
+			                    	<div class="nombrepost">Nombre de los post de ideas
+  										font-family Merriweather, @font-size-h4, Color @rojo </div>
+			                    	<a data-tooltip=".nombrepost"><h4>Caja de los sueños</h4></a>
+
+			                    	<div class="post">Nombre de los post de ideas
+  										font-family Merriweather, @font-size-h4, Color @rojo </div>
+			                        <a data-tooltip=".post"><p>En este escenario, creo que el motor de cambio se encuentra en la revitalización de los sueños infantiles, es decir, en entregar la posibilidad de abrir un centro dedicado al desarrollo de ideas infantiles donde se puedan llevar a cabo actividades de carácter lúdico con...</p></a>
 			                    </div>
 							</div>
 		                </a>
@@ -240,7 +246,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 
 
     	 <div class="row">
-          <div class="encabezado"><h3>Últimos Relatos</h3></div>
+          <a data-tooltip=".titulo"><div class="encabezado"><h3>Últimos Relatos</h3></div></a>
 										        <div class="col-md-3">
 
 			                <div class="thumbnail-relatos">
@@ -294,7 +300,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
       
       <!-- fin primer row -->
       <div class="row">
-        <div class="encabezado"><h3>Prensa Relacionada</h3></div>
+        <a data-tooltip=".titulo"><div class="encabezado"><h3>Prensa Relacionada</h3></div></a>
 						<div class="col-md-3">
 			                <div class="thumbnail">
 			                	<a href="prensa-nacional.html">
