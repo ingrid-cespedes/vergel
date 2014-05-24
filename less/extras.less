@@ -715,86 +715,8 @@ footer  li.active{
 }
 //Fin de CASCADA//
 
+
 //Inicio de popup//
-
-#bar{
-    width:100px;
-    height:100px;
-    position: absolute;
-    display: none;
-    background: fadeout(@gray, 10%);
-    font-size: 16px;
-    color: white;
-    padding:10px 10px;
-    box-shadow:2px 2px 4px 2px black inset;
-}
-
-
-.titulo{
-    width:200px;
-    height:auto;
-    position: absolute;
-    display: none;
-    background: fadeout(@gray, 5%);
-    font-size: 16px;
-    color: white;
-    padding:10px 10px;
-    border-radius: 5px;
-    z-index: 2;
-}
-.nombrepost{
-    width:200px;
-    height:auto;
-    position: absolute;
-    display: none;
-    background: fadeout(@gray, 5%);
-    font-size: 16px;
-    color: white;
-    padding:10px 10px;
-    border-radius: 5px;
-    z-index: 2;
-}
-.post{
-    width:200px;
-    height:auto;
-    position: absolute;
-    display: none;
-    background: fadeout(@gray, 5%);
-    font-size: 16px;
-    color: white;
-    padding:10px 10px;
-    border-radius: 5px;
-    z-index: 2;
-}
-
-span.tooltip {
-      position: absolute;
-      width: 100px;
-      height: 20px;
-      line-height: 20px;
-      padding: 10px;
-      font-size: 14px;
-      text-align: center;
-      color: rgb(113, 157, 171);
-      background: rgb(255, 255, 255);
-      border: 4px solid rgb(255, 255, 255);
-      border-radius: 5px;
-      text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
-      box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
-}
-
-span.tooltip:after {
-      content: "este tooltip";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-width: 10px;
-      border-style: solid;
-      border-color: #FFFFFF transparent transparent transparent;
-      top: 44px;
-      left: 50px;
-}
-
 //Top//
 a.top-t {
   position: relative;
@@ -802,7 +724,7 @@ a.top-t {
 }
 a.top-t span {
   position: absolute;
-  width:200px;
+  width:250px;
   color: #FFFFFF;
   background: #000000;
   height: 100px;
@@ -845,7 +767,7 @@ a.bottom-t span {
   width:200px;
   color: #FFFFFF;
   background: #000000;
-  height: 100px;
+  height: 200px;
   line-height: 20px;
   text-align: center; 
   visibility: hidden;
@@ -875,14 +797,13 @@ a:hover.bottom-t span {
 
 
 //left//
-
-a.left-t{
+a.izquierda-t {
   position: relative;
   display: inline;
 }
-a.left-t span {
+a.izquierda-t span {
   position: absolute;
-  width:200px;
+  width:250px;
   color: #FFFFFF;
   background: #000000;
   height: 100px;
@@ -893,26 +814,27 @@ a.left-t span {
   box-shadow: -1px 0px 9px #666666;
   padding: 10px 5px;
 }
-a.left-t span:after {
+a.izquierda-t span:after {
   content: '';
   position: absolute;
   top: 50%;
   left: 100%;
-  margin-top: -8px;
+  margin-left: -8px;
   width: 0; height: 0;
-  border-left: 8px solid #000000;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  border-top: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
-a:hover.left-t span {
+a:hover.izquierda-t span {
   visibility: visible;
   opacity: 0.8;
   right: 100%;
   top: 50%;
-  margin-top: -25.5px;
+  margin-top: -50px;
   margin-right: 15px;
   z-index: 999;
 }
+
 //right//
 
 a.right-t {
