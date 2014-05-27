@@ -36,9 +36,12 @@ html{
 
 
 .navbar{
+	.navbar-right{
+		position: absolute;
 	.cabecera,
+
 	.heading{
-		color: blue;
+		color: @rojo;
 		text-align: center;
 		float: left;
 		position: absolute;
@@ -47,12 +50,15 @@ html{
 		left: 25%;
 		text-transform: uppercase;
 		letter-spacing: .5ex;
+
 	}
 	.navbar-brand{
 		height: 80px;	
 		&:hover{
 			border-bottom: 3px solid @white;
 		}	}
+	
+	}
 }
 
 
@@ -731,14 +737,14 @@ a.top-t span {
   position: absolute;
   width:250px;
   color: @tooltip-color;
-  background-color: @gray-dark;
+  background-color:@black;
   height: 150px;
   line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
   box-shadow: -1px 0px 9px #666666;
-  padding: 15px 10px;
+  padding: 20px 10px;
   font-size: 14px;
   font-weight: 300;
 }
@@ -773,14 +779,14 @@ a.izquierda-t span {
    position: absolute;
   width:250px;
   color: @tooltip-color;
-  background-color: @tooltip-bg;
+  background-color:@black;
   height: 150px;
   line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
   box-shadow: -1px 0px 9px #666666;
-  padding: 15px 10px;
+  padding: 20px 10px;
   font-size: 14px;
   font-weight: 300;
 }
@@ -817,14 +823,14 @@ a.abajo-t span {
   position: absolute;
   width:250px;
   color: @tooltip-color;
-  background-color: @tooltip-bg;
-  height: 150px;
+  background-color:@black;
+  height: auto;
   line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
   box-shadow: -1px 0px 9px #666666;
-  padding: 15px 10px;
+  padding: 20px 10px;
   font-size: 14px;
   font-weight: 300;
 }

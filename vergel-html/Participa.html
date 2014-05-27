@@ -67,6 +67,11 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://vergel439.cl/wp-content/themes/vergel/js/bootstrap.min.js"></script>
+    <script>
+		$( document ).ready(function () {
+		    $("*[rel=tooltip]").tooltip();
+		});
+	</script>
 
 </head>
 
@@ -156,19 +161,22 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
                 	<div class="captiondos">		
 						<h1>Participa</h1>
 						<div class="row">
-<div class="col-md-6">
-<p><img class="imagendeterminada size-medium wp-image-1062 aligncenter" src="http://vergel439.cl/wp-content/uploads/2014/05/casa-500x333.jpg" alt="casa" width="200" height="200" /></p>
-<h3 style="text-align: center;">Ideas</h3>
-<p style="text-align: left;">Son propuestas del uso que se le podría dar a la casa afectada por el incendio en el cerro La Cruz, donada por el profesor Luis Álvarez, el cual menciona en una carta abierta: “Será un edificio como memoria para alguna finalidad. Gestionada por los estudiantes&#8230;allá arriba&#8230;”. Se quiere abrir la oportunidad a la comunidad de proponer ideas para este espacio.</p>
-</div>
-<div class="col-md-6">
-<p><img class="imagendeterminada size-medium wp-image-551 aligncenter" src="http://vergel439.cl/wp-content/uploads/2014/05/IMG_1267-500x333.jpg" alt="View of Avenida Argentina under the smoke." width="200" height="200" /></p>
-<h3 style="text-align: center;">Relatos</h3>
-<p style="text-align: left;">Los relatos cuentan la experiencia vivida en el incendio de Valparaíso del pasado 12 de Abril, con motivo de construir una memoria colectiva, se seleccionarán experiencias para posteriormente utilizarlas en una exposición que se realizará en el Centro Cultural de Valparaíso.</p>
-</div>
-</div>
-<p>Si es necesario, puedes insertar elementos multimedia como imágenes y videos.</p>
-Debes acceder a tu cuenta para participar, por favor <a href=http://vergel439.cl/registrate/>regístrate</a>, o bien <a href=http://vergel439.cl/iniciar-sesion/>inicia sesión</a>.
+							<div class="col-md-6" rel="tooltip" data-placement="left" data-original-title="Contenedor imagen y texto sobre Ideas. Variable: Col-md-6">
+								<p>
+									<img class="imagendeterminada size-medium wp-image-1062 aligncenter" src="http://vergel439.cl/wp-content/uploads/2014/05/casa-500x333.jpg" alt="casa" width="200" height="200" rel="tooltip" data-placement="right" data-original-title="Formato: JPG, Border-radius: 50%, Margin: 40px 10px 40px 165px" ></p>
+
+									<h3 style="text-align: center;">Ideas</h3>
+									<p style="text-align: left;">Son propuestas del uso que se le podría dar a la casa afectada por el incendio en el cerro La Cruz, donada por el profesor Luis Álvarez, el cual menciona en una carta abierta: “Será un edificio como memoria para alguna finalidad. Gestionada por los estudiantes&#8230;allá arriba&#8230;”. Se quiere abrir la oportunidad a la comunidad de proponer ideas para este espacio.</p>
+							</div>
+							<div class="col-md-6" rel="tooltip" data-placement="right" data-original-title="Contenedor imagen y texto sobre Relatos. Variable: Col-md-6">
+								<p>
+									<img class="imagendeterminada size-medium wp-image-551 aligncenter" src="http://vergel439.cl/wp-content/uploads/2014/05/IMG_1267-500x333.jpg" alt="View of Avenida Argentina under the smoke." width="200" height="200" rel="tooltip" data-placement="right" data-original-title="Formato: JPG, Border-radius: 50%, Margin: 40px 10px 40px 165px"></p>
+								<h3 style="text-align: center;">Relatos</h3>
+								<p style="text-align: left;">Los relatos cuentan la experiencia vivida en el incendio de Valparaíso del pasado 12 de Abril, con motivo de construir una memoria colectiva, se seleccionarán experiencias para posteriormente utilizarlas en una exposición que se realizará en el Centro Cultural de Valparaíso.</p>
+					</div>
+				</div>
+							<p>Si es necesario, puedes insertar elementos multimedia como imágenes y videos.</p>
+						Debes acceder a tu cuenta para participar, por favor <a href=http://vergel439.cl/registrate/>regístrate</a>, o bien <a href=http://vergel439.cl/iniciar-sesion/>inicia sesión</a>.
 					</div>
 				</div>
 			</div>
@@ -178,11 +186,13 @@ Debes acceder a tu cuenta para participar, por favor <a href=http://vergel439.cl
 
 <footer>
 	<div class="container">
-				<div id="menu-secondary" class="footer-menu"><ul id="menu-menu-de-pie-de-pagina" class="nav navbar-nav"><li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a title="Contacto" href="http://vergel439.cl/contacto/">Contacto</a></li>
-<li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328"><a title="e[ad] Escuela de Arquitectura y Diseño PUCV" href="http://www.ead.pucv.cl">e[ad] Escuela de Arquitectura y Diseño PUCV</a></li>
-<li id="menu-item-329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-329"><a title="Instituto de Geografía PUCV" href="http://www.geopresencia.cl/">Instituto de Geografía PUCV</a></li>
-<li id="menu-item-547" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-547"><a title="Parque Cultural de Valparaíso" href="http://www.pcdv.cl">Parque Cultural de Valparaíso</a></li>
-</ul></div>
+		<div id="menu-secondary" class="footer-menu">
+			<ul id="menu-menu-de-pie-de-pagina" class="nav navbar-nav"><li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a title="Contacto" href="http://vergel439.cl/contacto/">Contacto</a></li>
+				<li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328"><a title="e[ad] Escuela de Arquitectura y Diseño PUCV" href="http://www.ead.pucv.cl">e[ad] Escuela de Arquitectura y Diseño PUCV</a></li>
+				<li id="menu-item-329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-329"><a title="Instituto de Geografía PUCV" href="http://www.geopresencia.cl/">Instituto de Geografía PUCV</a></li>
+				<li id="menu-item-547" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-547"><a title="Parque Cultural de Valparaíso" href="http://www.pcdv.cl">Parque Cultural de Valparaíso</a></li>
+			</ul>
+		</div>
 
         <div class="redsocial">
 
