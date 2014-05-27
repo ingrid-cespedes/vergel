@@ -6,6 +6,8 @@ Template Name: Página base
 
 <?php get_header() ?>
 
+<div class="container800">
+
     <div class="container margin-top-fix">
 		<?php the_post() ?>
 		
@@ -26,5 +28,5 @@ Template Name: Página base
 			
 		</div><!-- .row -->
     </div> <!-- container -->
-
+</div>
 <?php get_footer() ?>
