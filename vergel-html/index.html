@@ -56,6 +56,12 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="http://vergel439.cl/wp-content/themes/vergel/js/bootstrap.min.js"></script>
+    <script>
+		$( document ).ready(function () {
+		    $("*[rel=tooltip]").tooltip();
+		});
+	</script>
+    
 
 </head>
 
@@ -92,47 +98,49 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 
-		<div id="collapsible" class="collapse navbar-collapse pull-left"><ul id="menu-menu-header" class="nav navbar-nav">
+ 
+ 		<div id="collapsible" class="collapse navbar-collapse pull-left">
+ 			<ul id="menu-menu-header" class="nav navbar-nav">
 		
-			<li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a title="Vergel 439" href="vergel-439.html">Vergel 439</a></li>
-			<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27 dropdown"><a title="Concurso" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Concurso <span class="caret"></span></a>
-		<ul role="menu" class=" dropdown-menu">
-			<li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a title="Bases del concurso" href="concurso.html">Bases del concurso</a></li>
-			<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a title="Participa" href="participa.html">Participa</a></li>
-		</ul>
-			</li>
-			<li id="menu-item-1354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1354 dropdown"><a title="Ideas y Relatos" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Ideas y Relatos <span class="caret"></span></a>
-		<ul role="menu" class=" dropdown-menu">
-			<li id="menu-item-1025" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1025"><a title="Ideas" href="ideas.html">Ideas</a></li>
-			<li id="menu-item-549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-549"><a title="Relatos" href="relatos.html">Relatos</a></li>
-		</ul>
-			</li>
-			<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a title="Mapa" href="mapa.html">Mapa</a></li>
-			<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24 dropdown"><a title="Estudios" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Estudios <span class="caret"></span></a>
-		<ul role="menu" class=" dropdown-menu">
-			<li id="menu-item-1335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1335"><a title="Estudios Geográficos" href="geografico.html">Estudios Geográficos</a></li>
-			<li id="menu-item-1333" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1333"><a title="Estudios Arquitectónicos" href="arquitectonico.html">Estudios Arquitectónicos</a></li>
-			<li id="menu-item-1334" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1334"><a title="Estudios de Diseño" href="diseno.html">Estudios de Diseño</a></li>
-			<li id="menu-item-1267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1267"><a title="Mapa de Actores" href="mapa-de-actores.html">Mapa de Actores</a></li>
-		</ul>
-			</li>
-			<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 dropdown"><a title="Prensa" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Prensa <span class="caret"></span></a>
-		<ul role="menu" class=" dropdown-menu">
-			<li id="menu-item-298" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-298"><a title="Prensa Nacional" href="prensa-nacional.html">Prensa Nacional</a></li>
-			<li id="menu-item-297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-297"><a title="Prensa Internacional" href="prensa-internacional.html">Prensa Internacional</a></li>
-		</ul>
-			</li>
-		</ul></div>
+				<li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a title="Vergel 439" href="vergel-439.html">Vergel 439</a></li>
+				<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27 dropdown"><a title="Concurso" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Concurso <span class="caret"></span></a>
+			<ul role="menu" class=" dropdown-menu">
+				<li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a title="Bases del concurso" href="concurso.html">Bases del concurso</a></li>
+				<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a title="Participa" href="participa.html">Participa</a></li>
+			</ul>
+				</li>
+				<li id="menu-item-1354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1354 dropdown"><a title="Ideas y Relatos" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Ideas y Relatos <span class="caret"></span></a>
+			<ul role="menu" class=" dropdown-menu">
+				<li id="menu-item-1025" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1025"><a title="Ideas" href="ideas.html">Ideas</a></li>
+				<li id="menu-item-549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-549"><a title="Relatos" href="relatos.html">Relatos</a></li>
+			</ul>
+				</li>
+				<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a title="Mapa" href="mapa.html">Mapa</a></li>
+				<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24 dropdown"><a title="Estudios" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Estudios <span class="caret"></span></a>
+			<ul role="menu" class=" dropdown-menu">
+				<li id="menu-item-1335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1335"><a title="Estudios Geográficos" href="geografico.html">Estudios Geográficos</a></li>
+				<li id="menu-item-1333" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1333"><a title="Estudios Arquitectónicos" href="arquitectonico.html">Estudios Arquitectónicos</a></li>
+				<li id="menu-item-1334" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1334"><a title="Estudios de Diseño" href="diseno.html">Estudios de Diseño</a></li>
+				<li id="menu-item-1267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1267"><a title="Mapa de Actores" href="mapa-de-actores.html">Mapa de Actores</a></li>
+			</ul>
+				</li>
+				<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23 dropdown"><a title="Prensa" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Prensa <span class="caret"></span></a>
+			<ul role="menu" class=" dropdown-menu">
+				<li id="menu-item-298" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-298"><a title="Prensa Nacional" href="prensa-nacional.html">Prensa Nacional</a></li>
+				<li id="menu-item-297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-297"><a title="Prensa Internacional" href="prensa-internacional.html">Prensa Internacional</a></li>
+			</ul>
+				</li>
+			</ul>
+		</div>
 					
 	    <!-- <form class="navbar-form navbar-left" role="search"></form> -->
 		<div class='pull-right collapse navbar-collapse'>
-				
 			
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right" rel="tooltip" data-placement="bottom" data-original-title="size(130px, 130px),border-radius: 50%, background-color:@rojo, font-size: 20px, text-shadow: 2px 2px 0 fade(@black, 20), color: @white,">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Iniciar sesión/Registro<b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Iniciar sesión/Registro<b class="caret"></b></a></div>
 							<ul class="dropdown-menu">
-								<li><a href="registrate.html">Regístrate</a></li>				
+								<li><a href="registrate.html">Regístrate</a></li>			
 								<li><a href="iniciar-sesion.html">Iniciar sesión</a></li>				
 							</ul>
 					</li>
@@ -145,20 +153,26 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 	</header>
 <!-- Main jumbotron for a primary marketing message or call to action -->
 
-<div class="jumbotron margin-top-fix">
-    <div class="container">
+	<div class="jumbotron margin-top-fix">
+    	<div class="container">
 
 
-	<h1>Concurso de ideas y relatos</h1>
-        <p>Ideas para convertir las ruinas de Vergel 439 en un espacio socio-cultural</p>
-        <p>Lee las <a href="concurso.html">bases aquí</a> </p>
+			<a class="top-t"><h1>Concurso de ideas y relatos</h1><span>Font-family: @font-size-base * 4.5,Color: @jumbotron-heading-color; Text-shadow: @gray-darker*4 1px 1px 0.9px;</span></a>
+			<a class="top-t"href="">
+        		<p>Ideas para convertir las ruinas de Vergel 439 en un espacio socio-cultural</p><span> Margin-bottom:@jumbotron-padding / 0.5,Font size: @jumbotron-font-size,Font weight: 200</span></a>
+        		<p>Lee las <a href="concurso.html">bases aquí</a> </p>
 
+				<div class="boton-t" rel="tooltip" data-original-title="size(130px, 130px), border-radius: 50%, background-color:@rojo, font-size: 20px, text-shadow: 2px 2px 0 fade(@black, 20), color: @white">
+					<a class="btn btn-registrate btn-rnd" role="button" href="registrate.html">Regístrate</a>
+				</div>
+
+				<div class="boton-t"rel="tooltip" data-original-title="size(130px, 130px),border-radius: 50%, background-color:@rojo, font-size: 20px, text-shadow: 2px 2px 0 fade(@black, 20), color: @white,">
+    				<a class="btn btn-participa btn-rnd" role="button" href="participa.html">Participa</a>
+    			</div>	
 		
-			<a class="btn btn-registrate btn-rnd" role="button" href="registrate.html">Regístrate</a>
-    		<a class="btn btn-participa btn-rnd" role="button" href="participa.html">Participa</a>			
-		
-    </div>
-</div>
+    	</div>
+	</div>
+
 
 <!-- Galería -->
 
@@ -270,7 +284,7 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 				</div>
 		            </a>
 			</div>
-						        <div class="col-md-3">
+				 <div class="col-md-3">
 
 			                <div class="thumbnail-relatos">
 			                	<a href="relatos.html">
@@ -282,9 +296,9 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 							</div>
 		                </a>
 					</div>
-						        <div class="col-md-3">
+					<div class="col-md-3">
 
-			                <div class="thumbnail-relatos">
+			            <div class="thumbnail-relatos">
 			                	<a href="relatos.html">
 			                		<div class="caption">
 			                    	<h5>Del pueblo para el pueblo</h5>
@@ -296,17 +310,17 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 					</div>
 						        <div class="col-md-3">
 
-			                <div class="thumbnail-relatos">
-			                	<a href="relatos.html">
-			                				                    <div class="caption">
-			                    	<h5>Flores de Fuego</h5>
-			                    	<aside>Lunes 12 Mayo, 2014</aside>
-			                        <p>Esa tarde en la que comenzó todo, no fue necesario que alguien me dijera algo, ni tampoco ver la gran nube de humo que se alzaba por los cielos, tan solo bastaba sentir el calor incrementar en mi pieza para darme cuenta de que algo...</p>
+			         <div class="thumbnail-relatos">
+			             <a href="relatos.html">
+			                <div class="caption">
+			                   <h5>Flores de Fuego</h5>
+			                    <aside>Lunes 12 Mayo, 2014</aside>
+			                      <p>Esa tarde en la que comenzó todo, no fue necesario que alguien me dijera algo, ni tampoco ver la gran nube de humo que se alzaba por los cielos, tan solo bastaba sentir el calor incrementar en mi pieza para darme cuenta de que algo...</p>
 			                    </div>
 							</div>
 		                </a>
 					</div>
-					</div>
+				</div>
      
       
       <!-- fin primer row -->
@@ -347,18 +361,18 @@ var wpuf = {"ajaxurl":"http:\/\/vergel439.cl\/wp-admin\/admin-ajax.php","posting
 			</div>
 		        </a>
 		</div>
-						        <div class="col-md-3">
-			                <div class="thumbnail">
-			                	<a href="prensa-nacional.html">
-			                	<img width="1024" height="630" src="http://vergel439.cl/wp-content/uploads/2014/05/fotos-018-1024x630.jpg" class="attachment-small wp-post-image" alt="fotos-018-1024x630" />			                    
-			                	<div class="caption">
-			                    	<h5>Empresa privada y municipio porteño firman convenio para levantar centros deportivos afectados por el mega incendio</h5>
-			                    	<aside>S&aacute;bado 17 Mayo, 2014</aside>
+		<div class="col-md-3">
+			<div class="thumbnail">
+			    <a href="prensa-nacional.html">
+			        <img width="1024" height="630" src="http://vergel439.cl/wp-content/uploads/2014/05/fotos-018-1024x630.jpg" class="attachment-small wp-post-image" alt="fotos-018-1024x630" />			                    
+			            <div class="caption">
+			                <h5>Empresa privada y municipio porteño firman convenio para levantar centros deportivos afectados por el mega incendio</h5>
+			                    <aside>S&aacute;bado 17 Mayo, 2014</aside>
 			                        <p>Empresa privada ayudara a levantar centros deportivos afectados por el mega incendio del pasado mes La empresa Tresmontes Lucchetti, entregó...</p>
-			                    </div>
-							</div>
-		                </a>
-					</div>
+			             </div>
+				</div>
+		    </a>
+		</div>
 						        <div class="col-md-3">
 			                <div class="thumbnail">
 			                	<a href="prensa-nacional.html">
@@ -472,5 +486,7 @@ var _wpcf7 = {"loaderUrl":"http:\/\/vergel439.cl\/wp-content\/plugins\/contact-f
 		    $($(this).data("tooltip")).hide();
 		});
 		</script>
+
+
 </body>
 </html>

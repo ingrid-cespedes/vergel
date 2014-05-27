@@ -6,10 +6,11 @@
 // Base class
 .tooltip {
   position: absolute;
+  width: 250px;
   z-index: @zindex-tooltip;
   display: block;
   visibility: visible;
-  font-size: @font-size-small;
+  font-size: @font-size-base;
   line-height: 1.4;
   .opacity(0);
 
@@ -23,12 +24,13 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: @tooltip-max-width;
-  padding: 3px 8px;
+  padding: 10px 15px;
   color: @tooltip-color;
   text-align: center;
   text-decoration: none;
-  background-color: @tooltip-bg;
-  border-radius: @border-radius-base;
+  background-color: @gray-dark;
+  border-radius: 7px;
+
 }
 
 // Arrows

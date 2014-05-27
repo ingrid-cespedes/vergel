@@ -381,7 +381,7 @@ ul.ficha-prensa{
 			width: 90px;
 			text-align: right;
 			max-height: 5px;
-			font-weight: bolder;
+			font-weight: 700;
 			color: @rojo;
 			font-size:11px;
 			
@@ -730,10 +730,10 @@ a.top-t {
 a.top-t span {
   position: absolute;
   width:250px;
-  color: #FFFFFF;
-  background: #000000;
+  color: @tooltip-color;
+  background-color: @gray-dark;
   height: 150px;
-  line-height: 22px;
+  line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
@@ -772,10 +772,10 @@ a.izquierda-t {
 a.izquierda-t span {
    position: absolute;
   width:250px;
-  color: #FFFFFF;
-  background: #000000;
+  color: @tooltip-color;
+  background-color: @tooltip-bg;
   height: 150px;
-  line-height: 22px;
+  line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
@@ -816,10 +816,10 @@ a.abajo-t {
 a.abajo-t span {
   position: absolute;
   width:250px;
-  color: #FFFFFF;
-  background: #000000;
+  color: @tooltip-color;
+  background-color: @tooltip-bg;
   height: 150px;
-  line-height: 22px;
+  line-height: 1.4;
   text-align: center; 
   visibility: hidden;
   border-radius: 7px;
@@ -846,5 +846,23 @@ a:hover.abajo-t span {
   left: 50%;
   margin-left: -76px;
   z-index: 999;
+}
+
+//fin tooltips
+
+.boton-t{
+	width: 250px;
+	height: 150px; 
+	position:relative;
+	display: inline-block;
+	margin-bottom: 0px;
+	vertical-align: middle;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 6px 12px;
+	-moz-user-select: none;
+	padding: 48px 0px;
+	margin: 0px 20px 50px;
+	
 }
 
