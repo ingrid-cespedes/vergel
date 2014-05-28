@@ -1,4 +1,0 @@
-Vergel
-------
-
-Tema de wordpress
