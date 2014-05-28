@@ -34,11 +34,6 @@
 </div><!-- .row -->
 
 
-
-					
-
-	
-
     <!--Inicio de codigo de pagination-->
     <div class='pagination-custom'>
 	    <?php wp_pagenavi(); //Posts por páginas ?>
